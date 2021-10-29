@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
+    "target": "es5",
+    "baseUrl": "src/",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "lib": [
+      "es2019",
+      "dom"
+    ],
+    "strict": true
+  },
+  "include": [
+    "src",
+    "UI",
+    "img",
+    "constants",
+    "widgets"
+  ]
+}
