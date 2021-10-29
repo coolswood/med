@@ -1,15 +1,15 @@
+import Catalog from 'components/Catalog';
+import Home from 'components/Home';
+import Pdf from 'components/Pdf';
 import React from 'react';
-import { Route } from 'react-router-dom';
-import Root from 'routes/Root';
+import { Route, Switch } from 'react-router-dom';
 
 export default () => {
   return (
-    <Route
-      component={() => (
-        <>
-          <Root />
-        </>
-      )}
-    />
+    <Switch>
+      <Route path={'/prezentation/:id'} component={() => <Pdf />} />
+      <Route path={'/catalog'} component={() => <Catalog />} />
+      <Route path={'/'} component={() => <Home />} />
+    </Switch>
   );
 };

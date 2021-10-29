@@ -7,6 +7,8 @@ import { BrowserRouter } from 'react-router-dom';
 import ServiseWorker from 'scripts/ServiseWorker';
 import { StoreProvider } from 'stores/rootStore';
 
+import './styles.scss';
+
 import App from './App';
 
 export async function dynamicActivate(locale: string) {
