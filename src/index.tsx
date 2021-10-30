@@ -26,7 +26,7 @@ ReactDOM.render(
     <StoreProvider>
       <I18nProvider i18n={i18n}>
         <App />
-        {/*<ServiseWorker />*/}
+        <ServiseWorker />
       </I18nProvider>
     </StoreProvider>
   </BrowserRouter>,
