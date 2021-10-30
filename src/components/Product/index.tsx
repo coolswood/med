@@ -20,13 +20,7 @@ export default () => {
       </div>
       <div className={styles.table}>
         <Link to={'/prezentation/1'} className={styles.item}>
-          lorem dsdff
-        </Link>
-        <Link to={'/prezentation/1'} className={styles.item}>
-          lorem dsdff
-        </Link>
-        <Link to={'/prezentation/1'} className={styles.item}>
-          lorem dsdff
+          Презентация
         </Link>
       </div>
     </Page>
