@@ -9,22 +9,22 @@ export default () => {
     <Page>
       <div className={styles.table}>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
         <Link to={'/catalog'} className={styles.item}>
-          lorem dsdff
+          Портфель
         </Link>
       </div>
     </Page>

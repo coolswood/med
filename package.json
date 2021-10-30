@@ -103,7 +103,7 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "CI= NODE_ENV=production node_modules/react-scripts/bin/react-scripts.js build && npm run worker",
+    "build": "node scripts/build.js && npm run worker",
     "test": "node scripts/test.js --ci --watchAll=false --forceExit",
     "typecheck:watch": "./node_modules/.bin/tsc --watch --preserveWatchOutput --assumeChangesOnlyAffectDirectDependencies",
     "lint:fix": "./node_modules/.bin/eslint ./src --ext .js,.ts,.tsx --fix",

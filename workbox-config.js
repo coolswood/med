@@ -5,18 +5,10 @@ module.exports = {
   navigationPreload: false,
   runtimeCaching: [
     {
-      urlPattern: /https:\/\/mind-health\.ru\/(?!api)/,
+      urlPattern: /https:\/\/med-app\.store\//,
       handler: 'NetworkFirst',
     },
-    {
-      urlPattern: /https:\/\/fonts\.googleapis\.com/,
-      handler: 'CacheFirst',
-    },
-    {
-      urlPattern: /https:\/\/fonts\.gstatic\.com/,
-      handler: 'CacheFirst',
-    },
   ],
-  globPatterns: ['**/*.{ico}'],
+  globPatterns: ['**/*.{html,json,js,css}'],
   swDest: 'build/sw.js',
 };
