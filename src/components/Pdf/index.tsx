@@ -1,11 +1,15 @@
 import BackIcon from '@material-ui/icons/ArrowBack';
-import React, { useState } from 'react';
-// eslint-disable-next-line import/order
+import React, { useEffect, useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 import './style.scss';
-import { useHistory } from 'react-router-dom';
+import { useHistory, useParams } from 'react-router-dom';
+import indexeddb from 'indexeddb-fs';
+// @ts-ignore
+import base64ToBlob from 'base64toblob';
+// @ts-ignore
+import { decompress } from 'shrink-string';
 
 const options = {
   cMapUrl: 'cmaps/',
@@ -13,10 +17,20 @@ const options = {
 };
 
 export default () => {
+  const { id } = useParams<{ id: string }>();
+
   const history = useHistory();
-  const [file, setFile] = useState<null | string>('/1.pdf');
+  const [file, setFile] = useState<null | string | any>(null);
   const [numPages, setNumPages] = useState(0);
   const [pagesRendered, setPagesRendered] = useState(0);
+
+  useEffect(() => {
+    indexeddb.readFile('/1pdf').then(file => {
+      decompress(file).then((dec: string) => {
+        setFile(dec);
+      });
+    });
+  }, []);
 
   const goBack = () => {
     history.goBack();

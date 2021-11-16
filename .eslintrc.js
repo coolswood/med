@@ -28,31 +28,6 @@ module.exports = {
   },
   rules: {
     'import/no-cycle': 'error',
-    'import/order': [
-      'error',
-      {
-        alphabetize: {
-          order: 'asc',
-          caseInsensitive: true,
-        },
-        groups: [
-          'builtin',
-          'external',
-          'internal',
-          'parent',
-          'sibling',
-          'index',
-        ],
-        pathGroups: [
-          {
-            pattern: '{UI,components,@material-ui}/**',
-            group: 'internal',
-            position: 'after',
-          },
-        ],
-        'newlines-between': 'always',
-      },
-    ],
     'no-undef': 'off',
 
     // we have TSC for this

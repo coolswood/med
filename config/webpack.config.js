@@ -587,7 +587,7 @@ module.exports = function (webpackEnv) {
       ),
       new CopyWebpackPlugin({
         patterns: [
-          { from: 'src/prezentations/**/*.pdf' },
+          { from: 'public/**/*.pdf' },
           { from: 'node_modules/pdfjs-dist/cmaps/', to: 'cmaps/' },
         ],
       }),
