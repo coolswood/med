@@ -93,7 +93,6 @@ export default () => {
                           }}
                         >
                           <Page
-                            scale={1.2}
                             key={`page_${index + 1}`}
                             onRenderSuccess={onRenderSuccess}
                             pageNumber={index + 1}
