@@ -3,6 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
+import Slider from 'UI/Slider';
+
+import { SwiperSlide } from 'swiper/react';
+
 import './style.scss';
 import { useHistory, useParams } from 'react-router-dom';
 import indexeddb from 'indexeddb-fs';
@@ -56,19 +60,13 @@ export default () => {
   const pagesRenderedPlusOne = Math.min(pagesRendered + 1, numPages);
 
   return (
-    <div className="Example">
-      <div className="back" onClick={goBack}>
-        <BackIcon />
-      </div>
-      <div className="Example__container">
-        {file === null && (
-          <div className="Example__container__load">
-            <label htmlFor="file">Выберите файл:</label>{' '}
-            <input onChange={onFileChange} type="file" accept=".pdf" />
-          </div>
-        )}
+    <div>
+      {/*<div className="back" onClick={goBack}>*/}
+      {/*  <BackIcon />*/}
+      {/*</div>*/}
+      <div>
         {file !== null && (
-          <div className="Example__container__document">
+          <div>
             <Document
               file={file}
               onLoadSuccess={onDocumentLoadSuccess}
@@ -76,15 +74,36 @@ export default () => {
               onLoadError={setError}
               onSourceError={setError}
             >
-              {Array.from(new Array(pagesRenderedPlusOne), (el, index) => {
-                return (
-                  <Page
-                    key={`page_${index + 1}`}
-                    onRenderSuccess={onRenderSuccess}
-                    pageNumber={index + 1}
-                  />
-                );
-              })}
+              <Slider cssMode={false}>
+                {Array.from(new Array(pagesRenderedPlusOne), (el, index) => {
+                  return (
+                    <div
+                      style={{
+                        width: '100%',
+                      }}
+                    >
+                      <SwiperSlide key={`page_${index + 1}`}>
+                        <div
+                          style={{
+                            width: '100vw',
+                            height: '100vh',
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                          }}
+                        >
+                          <Page
+                            scale={1.2}
+                            key={`page_${index + 1}`}
+                            onRenderSuccess={onRenderSuccess}
+                            pageNumber={index + 1}
+                          />
+                        </div>
+                      </SwiperSlide>
+                    </div>
+                  );
+                })}
+              </Slider>
             </Document>
           </div>
         )}
