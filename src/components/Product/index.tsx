@@ -1,31 +1,13 @@
-import axios from 'axios';
 import styles from 'components/Home/styles.module.scss';
-import indexeddb from 'indexeddb-fs';
+import { save } from 'instruments/fileSaver';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Page from 'UI/Page';
-import superBase64 from 'super-base-64';
-// @ts-ignore
-import { compress } from 'shrink-string';
 
 import prod from './prod.png';
 import style from './styles.module.scss';
 
 export default () => {
-  const save = async () => {
-    axios({
-      url: '/1.pdf', //your url
-      method: 'GET',
-      responseType: 'blob', // important
-    }).then(response => {
-      superBase64(response.data).then(res => {
-        compress(res).then((compressed: string) => {
-          indexeddb.writeFile('/1pdf', compressed);
-        });
-      });
-    });
-  };
-
   return (
     <Page>
       <div className={style.productLine}>
@@ -37,11 +19,14 @@ export default () => {
         </div>
         <img className={style.productPic} src={prod} alt="" />
       </div>
-      <button onClick={save}>Сохранить</button>
+
       <div className={styles.table}>
-        <Link to={'/prezentation/1'} className={styles.item}>
-          Презентация
-        </Link>
+        <div>
+          <Link to={'/prezentation/1'} className={styles.item}>
+            Презентация
+          </Link>
+          <button onClick={() => save('1')}>Сохранить</button>
+        </div>
         <Link to={'/prezentation/2'} className={styles.item}>
           Презентация
         </Link>

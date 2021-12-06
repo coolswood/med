@@ -1,4 +1,3 @@
-import BackIcon from '@material-ui/icons/ArrowBack';
 import React, { useEffect, useState } from 'react';
 import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
@@ -9,11 +8,7 @@ import { SwiperSlide } from 'swiper/react';
 
 import './style.scss';
 import { useHistory, useParams } from 'react-router-dom';
-import indexeddb from 'indexeddb-fs';
-// @ts-ignore
-import base64ToBlob from 'base64toblob';
-// @ts-ignore
-import { decompress } from 'shrink-string';
+import { getFile } from 'instruments/fileSaver';
 
 const options = {
   cMapUrl: 'cmaps/',
@@ -29,11 +24,13 @@ export default () => {
   const [pagesRendered, setPagesRendered] = useState(0);
 
   useEffect(() => {
-    indexeddb.readFile('/1pdf').then(file => {
-      decompress(file).then((dec: string) => {
+    getFile(id)
+      .then((dec: string) => {
         setFile(dec);
+      })
+      .catch(() => {
+        setFile(`http://localhost:3000/prezentation/${id}.pdf`);
       });
-    });
   }, []);
 
   const goBack = () => {
