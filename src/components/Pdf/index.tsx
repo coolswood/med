@@ -3,6 +3,7 @@ import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
 import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 
 import Slider from 'UI/Slider';
+import PageWrap from 'UI/Page';
 
 import { SwiperSlide } from 'swiper/react';
 
@@ -26,10 +27,11 @@ export default () => {
   useEffect(() => {
     getFile(id)
       .then((dec: string) => {
+        console.log(111);
         setFile(dec);
       })
       .catch(() => {
-        setFile(`http://localhost:3000/prezentation/${id}.pdf`);
+        setFile(`http://localhost:3001/prezentation/${id}.pdf`);
       });
   }, []);
 
@@ -57,10 +59,7 @@ export default () => {
   const pagesRenderedPlusOne = Math.min(pagesRendered + 1, numPages);
 
   return (
-    <div>
-      {/*<div className="back" onClick={goBack}>*/}
-      {/*  <BackIcon />*/}
-      {/*</div>*/}
+    <PageWrap>
       <div>
         {file !== null && (
           <div>
@@ -82,8 +81,6 @@ export default () => {
                       <SwiperSlide key={`page_${index + 1}`}>
                         <div
                           style={{
-                            width: '100vw',
-                            height: '100vh',
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
@@ -104,6 +101,6 @@ export default () => {
           </div>
         )}
       </div>
-    </div>
+    </PageWrap>
   );
 };

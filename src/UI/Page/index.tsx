@@ -4,8 +4,15 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import styles from './styles.module.scss';
+import clsx from 'clsx';
 
-export default ({ children }: any) => {
+export default ({
+  children,
+  noMargin,
+}: {
+  children: any;
+  noMargin?: boolean;
+}) => {
   const history = useHistory();
 
   const goBack = () => {
@@ -16,15 +23,17 @@ export default ({ children }: any) => {
     <div>
       <div className={styles.bg} />
       <Fade in={true} timeout={1100}>
-        <div className={styles.root}>
+        <div className={clsx(styles.root, noMargin && styles.noMargin)}>
           {window.location.pathname !== '/' && (
             <div className={styles.back} onClick={goBack}>
               <BackIcon />
+              <span className={styles.backText}>Продукты</span>
             </div>
           )}
           {children}
         </div>
       </Fade>
+      <div className={styles.bottom}></div>
     </div>
   );
 };
