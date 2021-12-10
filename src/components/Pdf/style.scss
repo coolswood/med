@@ -4,6 +4,11 @@ body {
   font-family: Segoe UI, Tahoma, sans-serif;
 }
 
+canvas {
+  width: auto !important;
+  height: calc(100vh - 190px) !important;
+}
+
 .Example {
   overflow: hidden;
   input, button {
