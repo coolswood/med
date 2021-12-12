@@ -9,6 +9,6 @@ module.exports = {
       handler: 'NetworkFirst',
     },
   ],
-  globPatterns: ['**/*.{html,json,js,css}'],
+  globPatterns: ['**/*.{html,json,js,css,png,svg,jpg}'],
   swDest: 'build/sw.js',
 };
