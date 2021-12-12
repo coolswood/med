@@ -1,0 +1,31 @@
+.wrap {
+  width: 100%;
+  height: 80px;
+  background: rgba(55, 40, 43, 0.75);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(12px);
+  position: fixed;
+  top: -80px;
+  left: 0;
+  color: #fff;
+  fill: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+  z-index: 11;
+  transition: 0.5s;
+}
+
+.textHead {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px
+}
+
+.show {
+  top: 0;
+}

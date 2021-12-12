@@ -11,6 +11,8 @@ import './style.scss';
 import { useHistory, useParams } from 'react-router-dom';
 import { getFile } from 'instruments/fileSaver';
 import Loader from 'UI/Loader';
+import Header from './Header';
+import clsx from 'clsx';
 
 const options = {
   cMapUrl: 'cmaps/',
@@ -25,6 +27,8 @@ export default () => {
   const [numPages, setNumPages] = useState(0);
   const [pagesRendered, setPagesRendered] = useState(0);
 
+  const [showInstruments, setShowInstruments] = useState(false);
+
   useEffect(() => {
     getFile(id)
       .then((dec: string) => {
@@ -35,16 +39,16 @@ export default () => {
       });
   }, []);
 
+  const toggleHeader = () => {
+    setShowInstruments(!showInstruments);
+  };
+
   const goBack = () => {
     history.goBack();
   };
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
-  };
-
-  const onFileChange = (event: any) => {
-    setFile(event.target.files[0]);
   };
 
   const onRenderSuccess = () => {
@@ -59,7 +63,8 @@ export default () => {
 
   return (
     <PageWrap fullScreen noMargin>
-      <div>
+      <Header show={showInstruments} />
+      <div onClick={toggleHeader}>
         {numPages === 0 && <Loader />}
         {file !== null && (
           <div>
@@ -101,6 +106,9 @@ export default () => {
             </Document>
           </div>
         )}
+        <div className={clsx('counter', showInstruments && 'showCounter')}>
+          1 / {numPages}
+        </div>
       </div>
     </PageWrap>
   );
