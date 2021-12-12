@@ -5,8 +5,9 @@ body {
 }
 
 canvas {
-  width: auto !important;
-  height: calc(100vh - 190px) !important;
+  width: 100vw !important;
+  height: auto !important;
+  margin-top: auto;
 }
 
 .Example {

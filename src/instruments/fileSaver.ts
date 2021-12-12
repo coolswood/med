@@ -6,7 +6,7 @@ import { compress, decompress } from 'shrink-string';
 
 export const save = async (id: string) => {
   const response = await axios({
-    url: `/prezentation/${id}.pdf`,
+    url: `/prezentation/1.pdf`,
     method: 'GET',
     responseType: 'blob',
   });
@@ -21,7 +21,6 @@ export const save = async (id: string) => {
 
 export const getFile = async (url: string) => {
   const file = await indexeddb.readFile(url);
-  console.log(file);
 
   return decompress(file);
 };

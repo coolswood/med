@@ -7,12 +7,14 @@ import { StoreProvider } from 'stores/rootStore';
 import './styles.scss';
 
 import App from './App';
+import Autosave from 'scripts/Autosave';
 
 ReactDOM.render(
   <BrowserRouter>
     <StoreProvider>
       <App />
       <ServiseWorker />
+      <Autosave />
     </StoreProvider>
   </BrowserRouter>,
   document.getElementById('root')

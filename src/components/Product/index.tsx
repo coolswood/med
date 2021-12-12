@@ -5,6 +5,7 @@ import prod from './prod.png';
 import style from './styles.module.scss';
 import styles from 'components/common.module.scss';
 import { Link } from 'react-router-dom';
+import { mass } from 'scripts/Autosave';
 
 export default () => {
   return (
@@ -50,17 +51,24 @@ export default () => {
         style={{
           display: 'flex',
           justifyContent: 'space-around',
+          flexWrap: 'wrap',
         }}
       >
-        <Link to={'/prezentation/1'} className={styles.mainBtn}>
-          Презентация
-        </Link>
-        <Link to={'/prezentation/2'} className={styles.mainBtn}>
-          Презентация
-        </Link>
-        <Link to={'/prezentation/10'} className={styles.mainBtn}>
-          Презентация
-        </Link>
+        {mass.map((i, id) => {
+          if (id === 0) return null;
+
+          return (
+            <Link
+              to={`/prezentation/${id}`}
+              style={{
+                marginBottom: 10,
+              }}
+              className={styles.mainBtn}
+            >
+              Презентация {id}
+            </Link>
+          );
+        })}
       </div>
     </Page>
   );

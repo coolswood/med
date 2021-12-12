@@ -31,7 +31,7 @@ export default () => {
         setFile(dec);
       })
       .catch(() => {
-        setFile(`http://localhost:3001/prezentation/${id}.pdf`);
+        setFile(`${window.location.origin}/prezentation/${id}.pdf`);
       });
   }, []);
 
@@ -59,7 +59,7 @@ export default () => {
   const pagesRenderedPlusOne = Math.min(pagesRendered + 1, numPages);
 
   return (
-    <PageWrap>
+    <PageWrap fullScreen noMargin>
       <div>
         {file !== null && (
           <div>
