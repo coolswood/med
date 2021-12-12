@@ -10,6 +10,7 @@ import { SwiperSlide } from 'swiper/react';
 import './style.scss';
 import { useHistory, useParams } from 'react-router-dom';
 import { getFile } from 'instruments/fileSaver';
+import Loader from 'UI/Loader';
 
 const options = {
   cMapUrl: 'cmaps/',
@@ -27,7 +28,6 @@ export default () => {
   useEffect(() => {
     getFile(id)
       .then((dec: string) => {
-        console.log(111);
         setFile(dec);
       })
       .catch(() => {
@@ -41,7 +41,6 @@ export default () => {
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
     setNumPages(numPages);
-    setPagesRendered(0);
   };
 
   const onFileChange = (event: any) => {
@@ -61,6 +60,7 @@ export default () => {
   return (
     <PageWrap fullScreen noMargin>
       <div>
+        {numPages === 0 && <Loader />}
         {file !== null && (
           <div>
             <Document
@@ -69,6 +69,7 @@ export default () => {
               options={options}
               onLoadError={setError}
               onSourceError={setError}
+              loading={''}
             >
               <Slider cssMode={false}>
                 {Array.from(new Array(pagesRenderedPlusOne), (el, index) => {

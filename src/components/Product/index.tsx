@@ -1,13 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Page from 'UI/Page';
 
-import prod from './prod.png';
 import style from './styles.module.scss';
 import styles from 'components/common.module.scss';
-import { Link } from 'react-router-dom';
-import { mass } from 'scripts/Autosave';
+import { useParams } from 'react-router-dom';
+import { products } from 'contants';
+import Popup from 'UI/Popup';
+import PrezentationItem from './PrezentationItem';
 
 export default () => {
+  const { id } = useParams<{ id: any }>();
+  const [selectedButton, setSelectedButton] = useState('');
+  const [openedPopup, setOpenedPopup] = useState(false);
+
+  const { name, subtitle, description, img, prezentations } = products.find(
+    i => i.id === id
+  )!;
+
+  const selectButton = (button: string) => {
+    setSelectedButton(button);
+    setOpenedPopup(true);
+  };
+
+  const removeSelected = () => {
+    setOpenedPopup(false);
+  };
+
   return (
     <Page>
       <div className={style.productLine}>
@@ -17,7 +35,7 @@ export default () => {
               marginBottom: 20,
             }}
             className={style.productPic}
-            src={prod}
+            src={img}
             alt=""
           />
           <div
@@ -28,7 +46,7 @@ export default () => {
               fontWeight: 'bold',
             }}
           >
-            Алвовизан
+            {name}
           </div>
           <div
             style={{
@@ -37,39 +55,40 @@ export default () => {
               fontSize: 18,
             }}
           >
-            Диеногест 2 мг
+            {subtitle}
           </div>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
-            aspernatur deleniti doloremque et facilis impedit magni nam quam qui
-            repellat rerum, voluptate. Dolorum facilis magnam minima
-            necessitatibus odit officia officiis!
-          </div>
+          <div>{description}</div>
         </div>
       </div>
-      <div
-        style={{
-          display: 'flex',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
-        }}
-      >
-        {mass.map((i, id) => {
-          if (id === 0) return null;
-
-          return (
-            <Link
-              to={`/prezentation/${id}`}
-              style={{
-                marginBottom: 10,
-              }}
-              className={styles.mainBtn}
-            >
-              Презентация {id}
-            </Link>
-          );
-        })}
+      <div className={style.buttons}>
+        <div
+          onClick={() => selectButton('Иструкции')}
+          className={styles.mainBtn}
+        >
+          Иструкции
+        </div>
+        <div
+          onClick={() => selectButton('Материалы')}
+          className={styles.mainBtn}
+        >
+          Материалы
+        </div>
+        <div
+          onClick={() => selectButton('Презентации')}
+          className={styles.mainBtn}
+        >
+          Презентации
+        </div>
       </div>
+      <Popup
+        opened={openedPopup}
+        togglePopup={removeSelected}
+        title={selectedButton}
+      >
+        {prezentations.map(i => (
+          <PrezentationItem name={i.name} pdfName={i.pdfName} />
+        ))}
+      </Popup>
     </Page>
   );
 };
