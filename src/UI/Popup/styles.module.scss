@@ -4,6 +4,6 @@
   backdrop-filter: blur(12px);
   border-radius: 12px;
   padding: 10px 0;
-  width: 600px;
-  height: 290px;
+  min-width: 600px;
+  min-height: 290px;
 }

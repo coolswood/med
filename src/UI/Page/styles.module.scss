@@ -7,12 +7,14 @@
     left: 0;
     z-index: -1;
     background-size: cover;
+    background-image: url('./bg.svg')
 }
 
 .root {
     max-width: 1080px;
     margin: 50px auto;
     padding: 0 20px;
+    margin-bottom: 90px;
 }
 
 .noMargin {

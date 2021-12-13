@@ -5,10 +5,10 @@ import 'react-pdf/dist/esm/Page/AnnotationLayer.css';
 import Slider from 'UI/Slider';
 import PageWrap from 'UI/Page';
 
-import { SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 import './style.scss';
-import { useHistory, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getFile } from 'instruments/fileSaver';
 import Loader from 'UI/Loader';
 import Header from './Header';
@@ -22,10 +22,11 @@ const options = {
 export default () => {
   const { id } = useParams<{ id: string }>();
 
-  const history = useHistory();
   const [file, setFile] = useState<null | string | any>(null);
   const [numPages, setNumPages] = useState(0);
   const [pagesRendered, setPagesRendered] = useState(0);
+  const [swiperInstance, setSwiperInstance] = useState<Swiper | null>(null);
+  const [activePage, setActivePage] = useState(1);
 
   const [showInstruments, setShowInstruments] = useState(false);
 
@@ -39,12 +40,18 @@ export default () => {
       });
   }, []);
 
+  useEffect(() => {
+    if (swiperInstance) {
+      // @ts-ignore
+      swiperInstance.on('slideChange', function () {
+        // @ts-ignore
+        setActivePage(this.activeIndex + 1);
+      });
+    }
+  }, [swiperInstance]);
+
   const toggleHeader = () => {
     setShowInstruments(!showInstruments);
-  };
-
-  const goBack = () => {
-    history.goBack();
   };
 
   const onDocumentLoadSuccess = ({ numPages }: { numPages: number }) => {
@@ -57,6 +64,10 @@ export default () => {
 
   const setError = () => {
     setFile(null);
+  };
+
+  const onSwiper = (swiper: Swiper) => {
+    setSwiperInstance(swiper);
   };
 
   const pagesRenderedPlusOne = Math.min(pagesRendered + 1, numPages);
@@ -76,7 +87,7 @@ export default () => {
               onSourceError={setError}
               loading={''}
             >
-              <Slider cssMode={false}>
+              <Slider cssMode={false} onSwiper={onSwiper}>
                 {Array.from(new Array(pagesRenderedPlusOne), (el, index) => {
                   return (
                     <div
@@ -107,7 +118,7 @@ export default () => {
           </div>
         )}
         <div className={clsx('counter', showInstruments && 'showCounter')}>
-          1 / {numPages}
+          {activePage} / {numPages}
         </div>
       </div>
     </PageWrap>

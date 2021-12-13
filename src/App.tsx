@@ -1,3 +1,4 @@
+import Bayer from 'components/Bayer';
 import Catalog from 'components/Catalog';
 import Home from 'components/Home';
 import Pdf from 'components/Pdf';
@@ -11,6 +12,7 @@ export default () => {
       <Route path={'/prezentation/:id'} component={() => <Pdf />} />
       <Route path={'/product/:id'} component={() => <Product />} />
       <Route path={'/catalog'} component={() => <Catalog />} />
+      <Route path={'/bayer'} component={() => <Bayer />} />
       <Route path={'/'} component={() => <Home />} />
     </Switch>
   );

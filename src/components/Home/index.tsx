@@ -2,8 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Page from 'UI/Page';
 
-import logo from './logo.svg';
-
 import styles from 'components/common.module.scss';
 
 export default () => {
@@ -15,9 +13,13 @@ export default () => {
           display: 'flex',
           justifyContent: 'center',
           marginBottom: 50,
+          marginTop: 150,
+          fontSize: 60,
+          color: '#F0E9E7',
+          fontWeight: 'bold',
         }}
       >
-        <img src={logo} alt="" />
+        ZENTIVA WOMAN HEALTH
       </div>
       <div
         style={{
@@ -26,7 +28,13 @@ export default () => {
           alignItems: 'center',
         }}
       >
-        <Link to={'/catalog'} className={styles.mainBtn}>
+        <Link
+          style={{
+            width: '420px',
+          }}
+          to={'/catalog'}
+          className={styles.mainBtn}
+        >
           Продукты
         </Link>
       </div>

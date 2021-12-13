@@ -10,10 +10,12 @@ export default ({
   children,
   noMargin,
   fullScreen,
+  backText,
 }: {
   children: any;
   noMargin?: boolean;
   fullScreen?: boolean;
+  backText?: string;
 }) => {
   const history = useHistory();
 
@@ -29,7 +31,7 @@ export default ({
           {window.location.pathname !== '/' && !fullScreen && (
             <div className={styles.back} onClick={goBack}>
               <BackIcon />
-              <span className={styles.backText}>Продукты</span>
+              <span className={styles.backText}>{backText}</span>
             </div>
           )}
           {children}

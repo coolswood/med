@@ -27,7 +27,7 @@ export default () => {
   };
 
   return (
-    <Page>
+    <Page backText="Продукты">
       <div className={style.productLine}>
         <div className={style.container}>
           <img

@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import Page from 'UI/Page';
 
 import styles from './styles.module.scss';
+import common from 'components/common.module.scss';
 import { products } from 'contants';
 
 export default () => {
   return (
-    <Page>
+    <Page backText="Главная">
       <div className={styles.table}>
         {products.map(i => (
           <Link className={styles.item} to={`/product/${i.id}`}>
@@ -17,6 +18,21 @@ export default () => {
           </Link>
         ))}
       </div>
+      <Link
+        style={{
+          width: '260px',
+          padding: 20,
+          borderRadius: 12,
+          marginTop: 20,
+          textAlign: 'center',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+        }}
+        to={'/bayer'}
+        className={common.mainBtn}
+      >
+        Портфель Женского здоровья Ex-Bayer
+      </Link>
     </Page>
   );
 };
