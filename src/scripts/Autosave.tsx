@@ -1,19 +1,21 @@
 import { useEffect } from 'react';
-import { save } from 'instruments/fileSaver';
-
-export const mass = new Array(100).fill(1);
-
-const cnt = 0;
+import { checkFile, save } from 'instruments/fileSaver';
+import { products } from 'contants';
 
 const saveIt = async () => {
-  // for (const i of mass) {
-  //   cnt++;
-  //   try {
-  //     await save(String(cnt));
-  //   } catch (e) {
-  //     console.log(e);
-  //   }
-  // }
+  for (const item of products) {
+    for (const p of item.prezentations) {
+      const isExist = await checkFile(p.pdfName);
+
+      if (!isExist) {
+        try {
+          await save(String(p.pdfName));
+        } catch (e) {
+          console.log(e);
+        }
+      }
+    }
+  }
 };
 
 export default () => {
