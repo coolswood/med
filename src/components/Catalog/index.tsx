@@ -6,13 +6,17 @@ import Page from 'UI/Page';
 import styles from './styles.module.scss';
 import common from 'components/common.module.scss';
 import { products } from 'contants';
+import clsx from 'clsx';
 
 export default () => {
   return (
     <Page backText="Главная">
       <div className={styles.table}>
         {products.map(i => (
-          <Link className={styles.item} to={`/product/${i.id}`}>
+          <Link
+            className={clsx(styles.item, common.shitEffects)}
+            to={`/product/${i.id}`}
+          >
             <img className={style.productPic} src={i.img} alt="" />
             <div className={styles.productName}>{i.name}</div>
           </Link>
@@ -29,7 +33,7 @@ export default () => {
           marginRight: 'auto',
         }}
         to={'/bayer'}
-        className={common.mainBtn}
+        className={clsx(common.mainBtn, common.shitEffects)}
       >
         Портфель Женского здоровья Ex-Bayer
       </Link>

@@ -7,6 +7,8 @@ import { useParams } from 'react-router-dom';
 import { products } from 'contants';
 import Popup from 'UI/Popup';
 import PrezentationItem from './PrezentationItem';
+import clsx from 'clsx';
+import common from 'components/common.module.scss';
 
 export default () => {
   const { id } = useParams<{ id: any }>();
@@ -28,7 +30,7 @@ export default () => {
 
   return (
     <Page backText="Продукты">
-      <div className={style.productLine}>
+      <div className={clsx(style.productLine, common.shitEffects)}>
         <div className={style.container}>
           <img
             style={{
@@ -63,19 +65,19 @@ export default () => {
       <div className={style.buttons}>
         <div
           onClick={() => selectButton('Иструкции')}
-          className={styles.mainBtn}
+          className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Иструкции
         </div>
         <div
           onClick={() => selectButton('Материалы')}
-          className={styles.mainBtn}
+          className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Материалы
         </div>
         <div
           onClick={() => selectButton('Презентации')}
-          className={styles.mainBtn}
+          className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Презентации
         </div>

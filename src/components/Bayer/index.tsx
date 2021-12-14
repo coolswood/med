@@ -5,6 +5,8 @@ import Page from 'UI/Page';
 
 import styles from './styles.module.scss';
 import { products } from 'contants';
+import common from 'components/common.module.scss';
+import clsx from 'clsx';
 
 export default () => {
   return (
@@ -12,7 +14,10 @@ export default () => {
       <h3 className={styles.title}>Портфель Женского здоровья Ex-Bayer</h3>
       <div className={styles.table}>
         {products.map(i => (
-          <Link className={styles.item} to={`/product/${i.id}`}>
+          <Link
+            className={clsx(styles.item, common.shitEffects)}
+            to={`/product/${i.id}`}
+          >
             <img className={style.productPic} src={i.img} alt="" />
             <div className={styles.textWrap}>
               <h4 className={styles.head}>Микрогинон</h4>

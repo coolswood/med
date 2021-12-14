@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Page from 'UI/Page';
 
 import styles from 'components/common.module.scss';
+import clsx from 'clsx';
 
 export default () => {
   return (
@@ -33,7 +34,7 @@ export default () => {
             width: '420px',
           }}
           to={'/catalog'}
-          className={styles.mainBtn}
+          className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Продукты
         </Link>

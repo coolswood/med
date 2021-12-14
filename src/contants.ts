@@ -2,6 +2,8 @@ import alvizan from './img/products/alvizan.png';
 import velledient from './img/products/velledient.png';
 import vidora from './img/products/vidora.png';
 import dieticlen from './img/products/dieticlen.png';
+import eoeli from './img/products/eoeli.png';
+import lizegora from './img/products/lizegora.png';
 
 export const products = [
   {
@@ -55,6 +57,36 @@ export const products = [
     subtitle: 'Диеногест 2 мг + ЭЭ 0,03 мг',
     description:
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
+    prezentations: [
+      {
+        name: 'Презентация',
+        pdfName: '1',
+      },
+    ],
+  },
+  {
+    id: 'eoeli',
+    name: 'Зоэли',
+    img: eoeli,
+    subtitle: 'Номегэстрол + эстрадиол',
+    description:
+      'Инновационный КОК:\n' +
+      'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
+    prezentations: [
+      {
+        name: 'Презентация',
+        pdfName: '1',
+      },
+    ],
+  },
+  {
+    id: 'lizegora',
+    name: 'Лизегора',
+    img: lizegora,
+    subtitle: 'Гозерелин',
+    description:
+      'Противоопухолевое средство, аналог гонадотропин-рилизинг гормона.\n' +
+      'Показания к применению: рак предстательной железы, рак молочной железы, эндометриоз, фиброма матки, для истончения эндометрия при планируемых операциях на эндометрии, при экстракорпоральном оплодотворении.',
     prezentations: [
       {
         name: 'Презентация',
