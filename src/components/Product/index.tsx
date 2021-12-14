@@ -15,9 +15,8 @@ export default () => {
   const [selectedButton, setSelectedButton] = useState('');
   const [openedPopup, setOpenedPopup] = useState(false);
 
-  const { name, subtitle, description, img, prezentations } = products.find(
-    i => i.id === id
-  )!;
+  const { name, subtitle, description, img, prezentations, addedDescription } =
+    products.find(i => i.id === id)!;
 
   const selectButton = (button: string) => {
     setSelectedButton(button);
@@ -32,34 +31,72 @@ export default () => {
     <Page backText="Продукты">
       <div className={clsx(style.productLine, common.shitEffects)}>
         <div className={style.container}>
-          <img
-            style={{
-              marginBottom: 20,
-            }}
-            className={style.productPic}
-            src={img}
-            alt=""
-          />
-          <div
-            style={{
-              color: '#432E33',
-              marginBottom: 5,
-              fontSize: 30,
-              fontWeight: 'bold',
-            }}
-          >
-            {name}
+          <div>
+            <img
+              style={{
+                marginBottom: 20,
+              }}
+              className={style.productPic}
+              src={img}
+              alt=""
+            />
+            <div
+              style={{
+                color: '#432E33',
+                marginBottom: 5,
+                fontSize: 30,
+                fontWeight: 'bold',
+              }}
+            >
+              {name}
+            </div>
+            <div
+              style={{
+                color: '#432E33',
+                marginBottom: 20,
+                fontSize: 18,
+              }}
+            >
+              {subtitle}
+            </div>
+            <div>{description}</div>
           </div>
-          <div
-            style={{
-              color: '#432E33',
-              marginBottom: 20,
-              fontSize: 18,
-            }}
-          >
-            {subtitle}
-          </div>
-          <div>{description}</div>
+          {addedDescription && (
+            <div
+              style={{
+                marginLeft: 20,
+              }}
+            >
+              <img
+                style={{
+                  marginBottom: 20,
+                }}
+                className={style.productPic}
+                src={addedDescription.img}
+                alt=""
+              />
+              <div
+                style={{
+                  color: '#432E33',
+                  marginBottom: 5,
+                  fontSize: 30,
+                  fontWeight: 'bold',
+                }}
+              >
+                {addedDescription.name}
+              </div>
+              <div
+                style={{
+                  color: '#432E33',
+                  marginBottom: 20,
+                  fontSize: 18,
+                }}
+              >
+                {addedDescription.subtitle}
+              </div>
+              <div>{addedDescription.description}</div>
+            </div>
+          )}
         </div>
       </div>
       <div className={style.buttons}>
@@ -88,7 +125,7 @@ export default () => {
         title={selectedButton}
       >
         {prezentations.map(i => (
-          <PrezentationItem name={i.name} pdfName={i.pdfName} />
+          <PrezentationItem key={i.pdfName} name={i.name} pdfName={i.pdfName} />
         ))}
       </Popup>
     </Page>

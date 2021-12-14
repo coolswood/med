@@ -14,6 +14,7 @@ export default () => {
       <div className={styles.table}>
         {products.map(i => (
           <Link
+            key={i.id}
             className={clsx(styles.item, common.shitEffects)}
             to={`/product/${i.id}`}
           >

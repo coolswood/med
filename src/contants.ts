@@ -4,6 +4,13 @@ import vidora from './img/products/vidora.png';
 import dieticlen from './img/products/dieticlen.png';
 import eoeli from './img/products/eoeli.png';
 import lizegora from './img/products/lizegora.png';
+import vidora_2 from './img/products/vidora_2.png';
+
+import microginon from './img/bayer/microginon.png';
+import proginova from './img/bayer/proginova.png';
+import trikvilar from './img/bayer/trikvilar.png';
+import klimen from './img/bayer/klimen.png';
+import klimonorm from './img/bayer/klimonorm.png';
 
 export const products = [
   {
@@ -43,6 +50,13 @@ export const products = [
     description:
       'Для всех женщин репродуктивного возраста, кому важна безопасность препарата при его\n' +
       'доступной цене.',
+    addedDescription: {
+      name: 'Видора Микро',
+      img: vidora_2,
+      subtitle: 'Дроспиренон 3 мг+ ЭЭ 0,02 мг',
+      description:
+        'Контрацепция, лечение угревой сыпи средней тяжести и лечение тяжелой формы предменструального синдрома (ПМС).',
+    },
     prezentations: [
       {
         name: 'Презентация',
@@ -93,5 +107,45 @@ export const products = [
         pdfName: '1',
       },
     ],
+  },
+];
+
+export const bayer = [
+  {
+    name: 'Микрогинон',
+    img: microginon,
+    subtitle: 'Левоноргестрел 150 мкг\n' + '+ ЭЭ30 мкг',
+    description:
+      'Для женщин с обильными\n' + 'менструациями и дисфункцией яичников.',
+  },
+  {
+    name: 'Прогинова',
+    img: proginova,
+    subtitle: 'Эстрадиола валерат 2 мг',
+    description:
+      'Оптимальное средство коррекции уровня эстрогенов с доказанной эффективностью и безопасностью.',
+  },
+  {
+    name: 'Триквилар',
+    img: trikvilar,
+    subtitle: 'Эстроген + Гестаген',
+    description:
+      'Для всех женщин репродуктивного возраста, у кого возникают головная боль, вздутие живота и боли в молочных железах на фоне приёма любого контрацептива.',
+  },
+  {
+    name: 'Климен',
+    img: klimen,
+    subtitle: 'Ципротерона ацетат 1 мг+ ЭВ 2 мг',
+    description:
+      'Единственный препарат МГТ с лечебными преимуществами для пациенток с гиперандрогенией, приводящей к эстетической деформации.',
+  },
+  {
+    name: 'Климонорм',
+    img: klimonorm,
+    subtitle: 'Левоноргестрел 150 мг\n' + '+ ЭВ 2 мг',
+    description:
+      'Единственный препарат МГТ с лечебными преимуществами\n' +
+      'для пациенток с АМК, со снижением когнитивных функций, либидо, ПНЯ\n' +
+      'и хирургической менопаузой.',
   },
 ];

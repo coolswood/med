@@ -1,10 +1,9 @@
 import style from 'components/Product/styles.module.scss';
 import React from 'react';
-import { Link } from 'react-router-dom';
 import Page from 'UI/Page';
 
 import styles from './styles.module.scss';
-import { products } from 'contants';
+import { bayer } from 'contants';
 import common from 'components/common.module.scss';
 import clsx from 'clsx';
 
@@ -13,11 +12,8 @@ export default () => {
     <Page backText="Продукты">
       <h3 className={styles.title}>Портфель Женского здоровья Ex-Bayer</h3>
       <div className={styles.table}>
-        {products.map(i => (
-          <Link
-            className={clsx(styles.item, common.shitEffects)}
-            to={`/product/${i.id}`}
-          >
+        {bayer.map(i => (
+          <div key={i.name} className={clsx(styles.item, common.shitEffects)}>
             <img className={style.productPic} src={i.img} alt="" />
             <div className={styles.textWrap}>
               <h4 className={styles.head}>Микрогинон</h4>
@@ -29,7 +25,7 @@ export default () => {
                 описание. Краткое описание препарата.{' '}
               </div>
             </div>
-          </Link>
+          </div>
         ))}
       </div>
     </Page>
