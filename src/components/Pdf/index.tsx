@@ -28,6 +28,8 @@ export default () => {
   const [swiperInstance, setSwiperInstance] = useState<Swiper | null>(null);
   const [activePage, setActivePage] = useState(1);
 
+  const [horizontalPosition, setHorizontalPosition] = useState(true);
+
   const [showInstruments, setShowInstruments] = useState(false);
 
   useEffect(() => {
@@ -95,7 +97,10 @@ export default () => {
                         width: '100%',
                       }}
                     >
-                      <SwiperSlide key={`page_${index + 1}`}>
+                      <SwiperSlide
+                        virtualIndex={index}
+                        key={`page_${index + 1}`}
+                      >
                         <div
                           style={{
                             display: 'flex',
@@ -106,7 +111,15 @@ export default () => {
                           <Page
                             key={`page_${index + 1}`}
                             onRenderSuccess={onRenderSuccess}
+                            onLoadSuccess={e =>
+                              setHorizontalPosition(e.width > e.height)
+                            }
                             pageNumber={index + 1}
+                            className={
+                              horizontalPosition
+                                ? 'horizontalPDF'
+                                : 'verticalPDF'
+                            }
                           />
                         </div>
                       </SwiperSlide>
