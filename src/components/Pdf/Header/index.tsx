@@ -10,10 +10,12 @@ export default ({
   show,
   name,
   type,
+  onCopy,
 }: {
   show: boolean;
   name: string;
   type: pdfType;
+  onCopy: () => void;
 }) => {
   const history = useHistory();
 
@@ -35,6 +37,7 @@ export default ({
         </div>
       </div>
       <div
+        onClick={onCopy}
         style={{
           display: 'flex',
           alignItems: 'center',

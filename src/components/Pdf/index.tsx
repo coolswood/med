@@ -31,6 +31,7 @@ export default () => {
   const [pagesRendered, setPagesRendered] = useState(0);
   const [swiperInstance, setSwiperInstance] = useState<Swiper | null>(null);
   const [activePage, setActivePage] = useState(1);
+  const [copied, setCopied] = useState(false);
 
   const [horizontalPosition, setHorizontalPosition] = useState(true);
 
@@ -45,6 +46,14 @@ export default () => {
         setFile(`${window.location.origin}/prezentation/${id}.pdf`);
       });
   }, []);
+
+  useEffect(() => {
+    if (copied) {
+      setTimeout(() => {
+        setCopied(false);
+      }, 1000);
+    }
+  }, [copied]);
 
   useEffect(() => {
     if (swiperInstance) {
@@ -80,11 +89,42 @@ export default () => {
 
   return (
     <PageWrap fullScreen noMargin>
-      <Header show={showInstruments} name={name} type={type} />
+      <Header
+        show={showInstruments}
+        name={name}
+        type={type}
+        onCopy={() => {
+          setCopied(true);
+          navigator.clipboard.writeText(window.location.href);
+        }}
+      />
+      {copied && (
+        <div
+          style={{
+            width: 280,
+            height: 60,
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            background: 'rgba(49, 37, 39, 0.75)',
+            boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+            backdropFilter: 'blur(12px)',
+            borderRadius: 12,
+            color: '#F0E9E7',
+            position: 'fixed',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
+            zIndex: 100,
+          }}
+        >
+          Скопировано
+        </div>
+      )}
       <div onClick={toggleHeader}>
         {numPages === 0 && <Loader />}
         {file !== null && (
-          <div>
+          <>
             <Document
               file={file}
               onLoadSuccess={onDocumentLoadSuccess}
@@ -132,7 +172,7 @@ export default () => {
                 })}
               </Slider>
             </Document>
-          </div>
+          </>
         )}
         <div className={clsx('counter', showInstruments && 'showCounter')}>
           <div
