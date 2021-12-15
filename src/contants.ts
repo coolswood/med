@@ -12,12 +12,20 @@ import trikvilar from './img/bayer/trikvilar.png';
 import klimen from './img/bayer/klimen.png';
 import klimonorm from './img/bayer/klimonorm.png';
 
+import Alv_2 from './img/productsPic/Alv_2.png';
+import Vel_2 from './img/productsPic/Vel_2.png';
+import Vidl_2 from './img/productsPic/Vidl_2.png';
+import Die_2 from './img/productsPic/Die_2.png';
+import Zoe_2 from './img/productsPic/Zoe_2.png';
+import Liz_2 from './img/productsPic/Liz_2.png';
+
 export const products = [
   {
     id: 'alvizan',
     name: 'Алвовизан',
     img: alvizan,
     subtitle: 'Диеногест 2 мг',
+    picture: Alv_2,
     description:
       'Алвовизан эффективен в лечении эндометриоза, как аГнРг, считающиеся стандартом терапии данного заболевания. Препарат обладает отличным профилем безопасности и переносимости, поэтому предназначен для длительного применения.',
     prezentations: [
@@ -31,6 +39,7 @@ export const products = [
     id: 'velledient',
     name: 'Велледиен',
     img: velledient,
+    picture: Vel_2,
     subtitle: 'Тиболон 2,5 мг',
     description:
       'Лечение симптомов эстрогенной недостаточности у женщин в постменопаузальном периоде (не ранее\n' +
@@ -46,6 +55,7 @@ export const products = [
     id: 'vidora',
     name: 'Видора',
     img: vidora,
+    picture: Vidl_2,
     subtitle: 'Дроспиренон 3 мг+ ЭЭ 0,03 мг',
     description:
       'Для всех женщин репродуктивного возраста, кому важна безопасность препарата при его\n' +
@@ -68,6 +78,7 @@ export const products = [
     id: 'dieticlen',
     name: 'Диециклен',
     img: dieticlen,
+    picture: Die_2,
     subtitle: 'Диеногест 2 мг + ЭЭ 0,03 мг',
     description:
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
@@ -82,6 +93,7 @@ export const products = [
     id: 'eoeli',
     name: 'Зоэли',
     img: eoeli,
+    picture: Zoe_2,
     subtitle: 'Номегэстрол + эстрадиол',
     description:
       'Инновационный КОК:\n' +
@@ -97,6 +109,7 @@ export const products = [
     id: 'lizegora',
     name: 'Лизегора',
     img: lizegora,
+    picture: Liz_2,
     subtitle: 'Гозерелин',
     description:
       'Противоопухолевое средство, аналог гонадотропин-рилизинг гормона.\n' +

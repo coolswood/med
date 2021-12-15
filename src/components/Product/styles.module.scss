@@ -8,6 +8,8 @@
   box-shadow: 1px 2px 2px 0px #00000040;
   border-radius: 12px;
   padding: 40px;
+  overflow: hidden;
+  min-height: 350px;
 }
 
 .container {
@@ -16,7 +18,7 @@
 }
 
 .productPic {
-  max-width: 200px;
+  max-width: 180px;
 }
 
 .buttons {

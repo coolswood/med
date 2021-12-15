@@ -9,7 +9,7 @@ import { Route, Switch } from 'react-router-dom';
 export default () => {
   return (
     <Switch>
-      <Route path={'/prezentation/:id'} component={() => <Pdf />} />
+      <Route path={'/prezentation/:type/:name/:id'} component={() => <Pdf />} />
       <Route path={'/product/:id'} component={() => <Product />} />
       <Route path={'/catalog'} component={() => <Catalog />} />
       <Route path={'/bayer'} component={() => <Bayer />} />

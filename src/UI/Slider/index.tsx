@@ -24,6 +24,7 @@ export default ({ children, cssMode = false, onSwiper }: SliderTypes) => {
       lazy
       onSwiper={onSwiper}
       slidesPerView={1}
+      spaceBetween={20}
     >
       {children}
     </Swiper>

@@ -19,6 +19,21 @@
   }
 }
 
+.blue {
+}
+
+.red {
+  animation-delay: .25s;
+}
+
+.yellow {
+  animation-delay: .5s;
+}
+
+.green {
+  animation-delay: .75s;
+}
+
 @keyframes :global(bounce) {
   50% {
     transform: translateY(25px);

@@ -4,8 +4,17 @@ import styles from './styles.module.scss';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import clsx from 'clsx';
 import { useHistory } from 'react-router-dom';
+import { pdfType } from 'components/Product';
 
-export default ({ show }: { show: boolean }) => {
+export default ({
+  show,
+  name,
+  type,
+}: {
+  show: boolean;
+  name: string;
+  type: pdfType;
+}) => {
   const history = useHistory();
 
   return (
@@ -13,7 +22,18 @@ export default ({ show }: { show: boolean }) => {
       <div onClick={() => history.goBack()}>
         <BackIcon />
       </div>
-      <div className={styles.textHead}>Текст</div>
+      <div className={styles.textHead}>
+        <div>{name}</div>
+        <div
+          style={{
+            fontSize: 18,
+            fontWeight: 500,
+            marginTop: 5,
+          }}
+        >
+          {type}
+        </div>
+      </div>
       <div
         style={{
           display: 'flex',

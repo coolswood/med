@@ -8,17 +8,25 @@ import { products } from 'contants';
 import Popup from 'UI/Popup';
 import PrezentationItem from './PrezentationItem';
 import clsx from 'clsx';
-import common from 'components/common.module.scss';
+
+export type pdfType = 'Иструкции' | 'Материалы' | 'Презентации' | '';
 
 export default () => {
   const { id } = useParams<{ id: any }>();
-  const [selectedButton, setSelectedButton] = useState('');
+  const [selectedButton, setSelectedButton] = useState<pdfType>('');
   const [openedPopup, setOpenedPopup] = useState(false);
 
-  const { name, subtitle, description, img, prezentations, addedDescription } =
-    products.find(i => i.id === id)!;
+  const {
+    name,
+    subtitle,
+    description,
+    img,
+    prezentations,
+    addedDescription,
+    picture,
+  } = products.find(i => i.id === id)!;
 
-  const selectButton = (button: string) => {
+  const selectButton = (button: pdfType) => {
     setSelectedButton(button);
     setOpenedPopup(true);
   };
@@ -29,7 +37,17 @@ export default () => {
 
   return (
     <Page backText="Продукты">
-      <div className={clsx(style.productLine, common.shitEffects)}>
+      <div className={clsx(style.productLine, styles.shitEffects)}>
+        <img
+          style={{
+            position: 'absolute',
+            top: 0,
+            right: 0,
+            height: '100%',
+          }}
+          src={picture}
+          alt=""
+        />
         <div className={style.container}>
           <div>
             <img
@@ -125,7 +143,12 @@ export default () => {
         title={selectedButton}
       >
         {prezentations.map(i => (
-          <PrezentationItem key={i.pdfName} name={i.name} pdfName={i.pdfName} />
+          <PrezentationItem
+            key={i.pdfName}
+            name={i.name}
+            pdfName={i.pdfName}
+            type={selectedButton}
+          />
         ))}
       </Popup>
     </Page>

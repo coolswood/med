@@ -14,13 +14,17 @@ import Loader from 'UI/Loader';
 import Header from './Header';
 import clsx from 'clsx';
 
+import arr from './arr.svg';
+import { pdfType } from 'components/Product';
+
 const options = {
   cMapUrl: 'cmaps/',
   cMapPacked: true,
 };
 
 export default () => {
-  const { id } = useParams<{ id: string }>();
+  const { id, type, name } =
+    useParams<{ id: string; type: pdfType; name: string }>();
 
   const [file, setFile] = useState<null | string | any>(null);
   const [numPages, setNumPages] = useState(0);
@@ -76,7 +80,7 @@ export default () => {
 
   return (
     <PageWrap fullScreen noMargin>
-      <Header show={showInstruments} />
+      <Header show={showInstruments} name={name} type={type} />
       <div onClick={toggleHeader}>
         {numPages === 0 && <Loader />}
         {file !== null && (
@@ -131,7 +135,31 @@ export default () => {
           </div>
         )}
         <div className={clsx('counter', showInstruments && 'showCounter')}>
-          {activePage} / {numPages}
+          <div
+            style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+              padding: '3px 5px',
+            }}
+          >
+            <img
+              style={{
+                marginRight: 10,
+                transform: 'rotate(180deg)',
+              }}
+              src={arr}
+              alt=""
+            />
+            {activePage} / {numPages}
+            <img
+              style={{
+                marginLeft: 10,
+              }}
+              src={arr}
+              alt=""
+            />
+          </div>
         </div>
       </div>
     </PageWrap>
