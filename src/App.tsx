@@ -11,9 +11,9 @@ export default () => {
     <Switch>
       <Route path={'/prezentation/:type/:name/:id'} component={() => <Pdf />} />
       <Route path={'/product/:id'} component={() => <Product />} />
-      <Route path={'/catalog'} component={() => <Catalog />} />
       <Route path={'/bayer'} component={() => <Bayer />} />
-      <Route path={'/'} component={() => <Home />} />
+      <Route path={'/'} component={() => <Catalog />} />
+      {/*<Route path={'/'} component={() => <Home />} />*/}
     </Switch>
   );
 };

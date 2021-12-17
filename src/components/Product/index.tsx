@@ -44,6 +44,7 @@ export default () => {
             top: 0,
             right: 0,
             height: '100%',
+            zIndex: -1,
           }}
           src={picture}
           alt=""
