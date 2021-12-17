@@ -22,6 +22,7 @@ export default () => {
     description,
     img,
     prezentations,
+    materials,
     addedDescription,
     picture,
   } = products.find(i => i.id === id)!;
@@ -143,14 +144,24 @@ export default () => {
         togglePopup={removeSelected}
         title={selectedButton}
       >
-        {prezentations.map(i => (
-          <PrezentationItem
-            key={i.pdfName}
-            name={i.name}
-            pdfName={i.pdfName}
-            type={selectedButton}
-          />
-        ))}
+        {selectedButton === 'Презентации' &&
+          prezentations.map(i => (
+            <PrezentationItem
+              key={i.pdfName}
+              name={i.name}
+              pdfName={i.pdfName}
+              type={selectedButton}
+            />
+          ))}
+        {selectedButton === 'Материалы' &&
+          materials.map(i => (
+            <PrezentationItem
+              key={i.pdfName}
+              name={i.name}
+              pdfName={i.pdfName}
+              type={selectedButton}
+            />
+          ))}
       </Popup>
     </Page>
   );

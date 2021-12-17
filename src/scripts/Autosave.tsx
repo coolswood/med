@@ -4,7 +4,7 @@ import { products } from 'contants';
 
 const saveIt = async () => {
   for (const item of products) {
-    for (const p of item.prezentations) {
+    for (const p of [...item.prezentations, ...item.materials]) {
       const isExist = await checkFile(p.pdfName);
 
       if (!isExist) {
