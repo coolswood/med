@@ -110,6 +110,7 @@ export default () => {
             boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
             backdropFilter: 'blur(12px)',
             borderRadius: 12,
+            fontSize: 20,
             color: '#F0E9E7',
             position: 'fixed',
             top: '50%',

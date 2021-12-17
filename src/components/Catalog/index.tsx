@@ -11,6 +11,35 @@ import clsx from 'clsx';
 export default () => {
   return (
     <Page backText="Главная">
+      <div
+        style={{
+          display: 'flex',
+          width: '100%',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          marginBottom: 30,
+        }}
+      >
+        <div
+          style={{
+            fontSize: 18,
+            fontWeight: 600,
+            color: '#432E33',
+          }}
+        >
+          Продукты
+        </div>
+        <div
+          style={{
+            fontSize: 36,
+            color: '#F0E9E7',
+            fontWeight: 'bold',
+          }}
+        >
+          ZENTIVA WOMAN HEALTH
+        </div>
+        <div></div>
+      </div>
       <div className={styles.table}>
         {products.map(i => (
           <Link
@@ -36,7 +65,7 @@ export default () => {
         to={'/bayer'}
         className={clsx(common.mainBtn, common.shitEffects)}
       >
-        Портфель Женского здоровья Ex-Bayer
+        Портфель Женского здоровья Zentiva
       </Link>
     </Page>
   );

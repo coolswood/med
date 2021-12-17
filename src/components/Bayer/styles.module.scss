@@ -16,6 +16,8 @@
   display: flex;
   align-items: flex-start;
   padding: 15px 20px;
+  box-sizing: border-box;
+  min-height: 180px;
 }
 
 .textWrap {
@@ -25,15 +27,15 @@
 
 .head {
   font-size: 24px;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .subtitle {
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 5px;
 }
 
 .text {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 12px;
 }
