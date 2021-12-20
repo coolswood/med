@@ -21,5 +21,7 @@ a {
 
 .MuiBackdrop-root {
     background: rgba(0, 0, 0, 0.25);
+    /* autoprefixer: ignore next */
     backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }

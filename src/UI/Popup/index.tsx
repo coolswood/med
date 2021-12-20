@@ -29,7 +29,9 @@ export default function AlertDialogSlide({
         aria-describedby="alert-dialog-slide-description"
       >
         <div className={styles.wrap}>
-          <DialogTitle>{title}</DialogTitle>
+          <DialogTitle>
+            <span className={styles.h1}>{title}</span>
+          </DialogTitle>
           <DialogContent>
             <DialogContentText id="alert-dialog-slide-description">
               {children}
