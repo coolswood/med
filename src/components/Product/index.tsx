@@ -25,6 +25,7 @@ export default () => {
     materials,
     addedDescription,
     picture,
+    instructions,
   } = products.find(i => i.id === id)!;
 
   const selectButton = (button: pdfType) => {
@@ -149,6 +150,7 @@ export default () => {
             <PrezentationItem
               key={i.pdfName}
               name={i.name}
+              forceVertical={i.forceVertical}
               pdfName={i.pdfName}
               type={selectedButton}
             />
@@ -158,6 +160,17 @@ export default () => {
             <PrezentationItem
               key={i.pdfName}
               name={i.name}
+              forceVertical={i.forceVertical}
+              pdfName={i.pdfName}
+              type={selectedButton}
+            />
+          ))}
+        {selectedButton === 'Иструкции' &&
+          instructions.map(i => (
+            <PrezentationItem
+              key={i.pdfName}
+              name={i.name}
+              forceVertical={i.forceVertical}
               pdfName={i.pdfName}
               type={selectedButton}
             />

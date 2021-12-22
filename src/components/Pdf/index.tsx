@@ -23,8 +23,12 @@ const options = {
 };
 
 export default () => {
-  const { id, type, name } =
-    useParams<{ id: string; type: pdfType; name: string }>();
+  const { id, type, name, forceVertical } = useParams<{
+    id: string;
+    type: pdfType;
+    name: string;
+    forceVertical: string;
+  }>();
 
   const [file, setFile] = useState<null | string | any>(null);
   const [numPages, setNumPages] = useState(0);
@@ -33,7 +37,9 @@ export default () => {
   const [activePage, setActivePage] = useState(1);
   const [copied, setCopied] = useState(false);
 
-  const [horizontalPosition, setHorizontalPosition] = useState(true);
+  const [horizontalPosition, setHorizontalPosition] = useState(
+    forceVertical !== 'true'
+  );
 
   const [showInstruments, setShowInstruments] = useState(false);
 
@@ -133,9 +139,14 @@ export default () => {
                           <Page
                             key={`page_${index + 1}`}
                             onRenderSuccess={onRenderSuccess}
-                            onLoadSuccess={e =>
-                              setHorizontalPosition(e.width > e.height)
-                            }
+                            onLoadSuccess={e => {
+                              if (forceVertical === 'false') {
+                                setHorizontalPosition(
+                                  forceVertical === 'false' ||
+                                    e.width > e.height
+                                );
+                              }
+                            }}
                             pageNumber={index + 1}
                             className={
                               horizontalPosition

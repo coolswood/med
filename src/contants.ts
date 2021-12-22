@@ -30,14 +30,63 @@ export const products = [
       'Алвовизан эффективен в лечении эндометриоза, как аГнРг, считающиеся стандартом терапии данного заболевания. Препарат обладает отличным профилем безопасности и переносимости, поэтому предназначен для длительного применения.',
     materials: [
       {
-        name: 'Материалы',
-        pdfName: 'Normative',
+        name: 'Кровотечения при приеме диеногеста',
+        pdfName: 'Krovotecheniya_pri_prieme_dienogesta',
+        forceVertical: false,
+      },
+      {
+        name: 'Материалы основные',
+        pdfName: 'Materialy_osnovnye',
+        forceVertical: false,
+      },
+      {
+        name: 'Отличие диеногестиа от других прогестинов',
+        pdfName: 'Otlichie_dienogestia_ot_drugix_progestinov',
+        forceVertical: false,
+      },
+      {
+        name: 'Предотвращение рецедивов эндометриоза',
+        pdfName: 'Predotvrashhenie_recedivov_endometrioza',
+        forceVertical: false,
+      },
+      {
+        name: 'Сравнение КОК и диеногеста',
+        pdfName: 'Sravnenie_KOK_i_dienogesta',
+        forceVertical: false,
       },
     ],
     prezentations: [
       {
-        name: 'Презентация',
-        pdfName: '1',
+        name: 'Диеногест в лечении тазовой боли',
+        pdfName: 'Dienogest_v_lechenii_tazovoj_boli',
+        forceVertical: false,
+      },
+      {
+        name: 'Исследование по биоэквивалентности',
+        pdfName: 'Issledovanie_po_bioekvivalentnosti',
+        forceVertical: false,
+      },
+      {
+        name: 'Исследование по подбору доз диеногеста',
+        pdfName: 'Issledovanie_po_podboru_doz_dienogesta',
+        forceVertical: false,
+      },
+      {
+        name: 'Применение диеногеста при длительном лечении эндометриоза',
+        pdfName: 'Primenenie_dienogesta_pri_dlitelnom_lechenii_endometrioza',
+        forceVertical: false,
+      },
+      {
+        name: 'Сравнительные исследования диеногеста с аГнРГ',
+        pdfName: 'Sravnitelnye_issledovaniya_dienogesta_s_aGnRG',
+        forceVertical: false,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Инструкция',
+        pdfName: 'alvizan_instr',
+        forceVertical: true,
       },
     ],
   },
@@ -50,11 +99,25 @@ export const products = [
     description:
       'Лечение симптомов эстрогенной недостаточности у женщин в постменопаузальном периоде (не ранее\n' +
       'чем через 1 год после последней менструации при наступлении естественной менопаузы или сразу после хирургической менопаузы.',
-    materials: [],
+    materials: [
+      {
+        name: 'Материалы',
+        pdfName: 'Normative',
+        forceVertical: false,
+      },
+    ],
     prezentations: [
       {
         name: 'Презентация',
         pdfName: '1',
+        forceVertical: false,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Презентация',
+        pdfName: '1',
+        forceVertical: false,
       },
     ],
   },
@@ -75,12 +138,8 @@ export const products = [
         'Контрацепция, лечение угревой сыпи средней тяжести и лечение тяжелой формы предменструального синдрома (ПМС).',
     },
     materials: [],
-    prezentations: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-      },
-    ],
+    prezentations: [],
+    instructions: [],
   },
   {
     id: 'dieticlen',
@@ -91,12 +150,8 @@ export const products = [
     description:
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
     materials: [],
-    prezentations: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-      },
-    ],
+    prezentations: [],
+    instructions: [],
   },
   {
     id: 'eoeli',
@@ -108,12 +163,8 @@ export const products = [
       'Инновационный КОК:\n' +
       'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
     materials: [],
-    prezentations: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-      },
-    ],
+    prezentations: [],
+    instructions: [],
   },
   {
     id: 'lizegora',
@@ -125,12 +176,8 @@ export const products = [
       'Противоопухолевое средство, аналог гонадотропин-рилизинг гормона.\n' +
       'Показания к применению: рак предстательной железы, рак молочной железы, эндометриоз, фиброма матки, для истончения эндометрия при планируемых операциях на эндометрии, при экстракорпоральном оплодотворении.',
     materials: [],
-    prezentations: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-      },
-    ],
+    prezentations: [],
+    instructions: [],
   },
 ];
 
@@ -172,4 +219,4 @@ export const bayer = [
       'для пациенток с АМК, со снижением когнитивных функций, либидо, ПНЯ\n' +
       'и хирургической менопаузой.',
   },
-];
+] as const;
