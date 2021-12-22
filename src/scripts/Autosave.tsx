@@ -9,13 +9,7 @@ const saveIt = async () => {
       ...item.materials,
       ...item.instructions,
     ]) {
-      let isExist;
-
-      try {
-        isExist = await checkFile(p.pdfName);
-      } catch (e) {
-        console.log(isExist);
-      }
+      const isExist = checkFile(p.pdfName);
 
       if (!isExist) {
         try {

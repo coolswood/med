@@ -4,6 +4,9 @@ import indexeddb from 'indexeddb-fs';
 // @ts-ignore
 import { compress, decompress } from 'shrink-string';
 
+const storage = localStorage.getItem('history');
+const history = storage === null ? [] : JSON.parse(storage);
+
 export const save = async (pdfName: string) => {
   const response = await axios({
     url: `/prezentation/${pdfName}.pdf`,
@@ -16,6 +19,10 @@ export const save = async (pdfName: string) => {
     indexeddb.writeFile(pdfName, compressed);
   });
 
+  history.push(pdfName);
+
+  localStorage.setItem('history', JSON.stringify(history));
+
   return true;
 };
 
@@ -25,6 +32,6 @@ export const getFile = async (pdfName: string) => {
   return decompress(file);
 };
 
-export const checkFile = async (pdfName: string) => {
-  return await indexeddb.exists(pdfName);
+export const checkFile = (pdfName: string) => {
+  return history.includes(pdfName);
 };
