@@ -157,8 +157,40 @@ export const products = [
       description:
         'Контрацепция, лечение угревой сыпи средней тяжести и лечение тяжелой формы предменструального синдрома (ПМС).',
     },
-    materials: [],
-    prezentations: [],
+    materials: [
+      {
+        name: 'Видора Микро 21+7_клинический разбор',
+        pdfName: 'vid_m_1',
+        forceVertical: false,
+      },
+      {
+        name: 'Видора Микро 24+4_клинический разбор',
+        pdfName: 'vid_m_2',
+        forceVertical: false,
+      },
+      {
+        name: 'Видора_клинический разбор',
+        pdfName: 'vid_m_3',
+        forceVertical: false,
+      },
+      {
+        name: 'Исакова_Видора Микро_клинический разбор',
+        pdfName: 'vid_m_4',
+        forceVertical: false,
+      },
+      {
+        name: 'Исакова_Видора_клинический разбор',
+        pdfName: 'vid_m_5',
+        forceVertical: false,
+      },
+    ],
+    prezentations: [
+      {
+        name: 'Видора',
+        pdfName: 'vid_p',
+        forceVertical: false,
+      },
+    ],
     instructions: [
       {
         name: 'Видора микро_обновленная ИМП № ЛП-002881-100820',

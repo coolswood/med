@@ -16,7 +16,6 @@ ReactDOM.render(
       <App />
       <ServiseWorker />
       <Autosave />
-      {/*<InstallRequest />*/}
     </StoreProvider>
   </BrowserRouter>,
   document.getElementById('root')
