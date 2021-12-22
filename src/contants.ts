@@ -73,12 +73,12 @@ export const products = [
       },
       {
         name: 'Применение диеногеста при длительном лечении эндометриоза',
-        pdfName: 'Primenenie_dienogesta_pri_dlitelnom_lechenii_endometrioza',
+        pdfName: 'Primenenie_dienogesta',
         forceVertical: false,
       },
       {
         name: 'Сравнительные исследования диеногеста с аГнРГ',
-        pdfName: 'Sravnitelnye_issledovaniya_dienogesta_s_aGnRG',
+        pdfName: 'Sravnitelnye_issledovaniya',
         forceVertical: false,
       },
     ],
@@ -99,27 +99,9 @@ export const products = [
     description:
       'Лечение симптомов эстрогенной недостаточности у женщин в постменопаузальном периоде (не ранее\n' +
       'чем через 1 год после последней менструации при наступлении естественной менопаузы или сразу после хирургической менопаузы.',
-    materials: [
-      {
-        name: 'Материалы',
-        pdfName: 'Normative',
-        forceVertical: false,
-      },
-    ],
-    prezentations: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-        forceVertical: false,
-      },
-    ],
-    instructions: [
-      {
-        name: 'Презентация',
-        pdfName: '1',
-        forceVertical: false,
-      },
-    ],
+    materials: [],
+    prezentations: [],
+    instructions: [],
   },
   {
     id: 'vidora',
