@@ -121,24 +121,30 @@ export default () => {
         </div>
       </div>
       <div className={style.buttons}>
-        <div
-          onClick={() => selectButton('Иструкции')}
-          className={clsx(styles.mainBtn, styles.shitEffects)}
-        >
-          Иструкции
-        </div>
-        <div
-          onClick={() => selectButton('Материалы')}
-          className={clsx(styles.mainBtn, styles.shitEffects)}
-        >
-          Материалы
-        </div>
-        <div
-          onClick={() => selectButton('Презентации')}
-          className={clsx(styles.mainBtn, styles.shitEffects)}
-        >
-          Презентации
-        </div>
+        {instructions.length !== 0 && (
+          <div
+            onClick={() => selectButton('Иструкции')}
+            className={clsx(styles.mainBtn, styles.shitEffects)}
+          >
+            Иструкции
+          </div>
+        )}
+        {materials.length !== 0 && (
+          <div
+            onClick={() => selectButton('Материалы')}
+            className={clsx(styles.mainBtn, styles.shitEffects)}
+          >
+            Материалы
+          </div>
+        )}
+        {prezentations.length !== 0 && (
+          <div
+            onClick={() => selectButton('Презентации')}
+            className={clsx(styles.mainBtn, styles.shitEffects)}
+          >
+            Презентации
+          </div>
+        )}
       </div>
       <Popup
         opened={openedPopup}

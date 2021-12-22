@@ -30,33 +30,6 @@ export const products = [
       'Алвовизан эффективен в лечении эндометриоза, как аГнРг, считающиеся стандартом терапии данного заболевания. Препарат обладает отличным профилем безопасности и переносимости, поэтому предназначен для длительного применения.',
     materials: [
       {
-        name: 'Кровотечения при приеме диеногеста',
-        pdfName: 'Krovotecheniya_pri_prieme_dienogesta',
-        forceVertical: false,
-      },
-      {
-        name: 'Материалы основные',
-        pdfName: 'Materialy_osnovnye',
-        forceVertical: false,
-      },
-      {
-        name: 'Отличие диеногестиа от других прогестинов',
-        pdfName: 'Otlichie_dienogestia_ot_drugix_progestinov',
-        forceVertical: false,
-      },
-      {
-        name: 'Предотвращение рецедивов эндометриоза',
-        pdfName: 'Predotvrashhenie_recedivov_endometrioza',
-        forceVertical: false,
-      },
-      {
-        name: 'Сравнение КОК и диеногеста',
-        pdfName: 'Sravnenie_KOK_i_dienogesta',
-        forceVertical: false,
-      },
-    ],
-    prezentations: [
-      {
         name: 'Диеногест в лечении тазовой боли',
         pdfName: 'Dienogest_v_lechenii_tazovoj_boli',
         forceVertical: false,
@@ -82,6 +55,33 @@ export const products = [
         forceVertical: false,
       },
     ],
+    prezentations: [
+      {
+        name: 'Кровотечения при приеме диеногеста',
+        pdfName: 'Krovotecheniya_pri_prieme_dienogesta',
+        forceVertical: false,
+      },
+      {
+        name: 'Материалы основные',
+        pdfName: 'Materialy_osnovnye',
+        forceVertical: false,
+      },
+      {
+        name: 'Отличие диеногестиа от других прогестинов',
+        pdfName: 'Otlichie_dienogestia_ot_drugix_progestinov',
+        forceVertical: false,
+      },
+      {
+        name: 'Предотвращение рецедивов эндометриоза',
+        pdfName: 'Predotvrashhenie_recedivov_endometrioza',
+        forceVertical: false,
+      },
+      {
+        name: 'Сравнение КОК и диеногеста',
+        pdfName: 'Sravnenie_KOK_i_dienogesta',
+        forceVertical: false,
+      },
+    ],
     instructions: [
       {
         name: 'Инструкция',
@@ -99,8 +99,40 @@ export const products = [
     description:
       'Лечение симптомов эстрогенной недостаточности у женщин в постменопаузальном периоде (не ранее\n' +
       'чем через 1 год после последней менструации при наступлении естественной менопаузы или сразу после хирургической менопаузы.',
-    materials: [],
-    prezentations: [],
+    materials: [
+      {
+        name: 'Буклет Велледиен (Тиболон)',
+        pdfName: 'Buklet_Velledien_Tibolon',
+        forceVertical: false,
+      },
+      {
+        name: 'Велледиен. Клинический случай №1',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_1',
+        forceVertical: false,
+      },
+      {
+        name: 'Велледиен. Клинический случай №2',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_2',
+        forceVertical: false,
+      },
+      {
+        name: 'Велледиен. Клинический случай №3',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_3',
+        forceVertical: false,
+      },
+      {
+        name: 'Велледиен. Клинический случай №4',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_4',
+        forceVertical: false,
+      },
+    ],
+    prezentations: [
+      {
+        name: 'Велледиен',
+        pdfName: 'Velledien',
+        forceVertical: false,
+      },
+    ],
     instructions: [],
   },
   {

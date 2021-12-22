@@ -12,9 +12,7 @@ export const save = async (pdfName: string) => {
   });
 
   const base64 = await superBase64(response.data);
-  await compress(base64).then((compressed: string) => {
-    indexeddb.writeFile(pdfName, compressed);
-  });
+  await indexeddb.writeFile(pdfName, base64);
 
   return true;
 };
@@ -22,7 +20,7 @@ export const save = async (pdfName: string) => {
 export const getFile = async (pdfName: string) => {
   const file = await indexeddb.readFile(pdfName);
 
-  return decompress(file);
+  return file;
 };
 
 export const checkFile = async (pdfName: string) => {
