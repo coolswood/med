@@ -133,7 +133,13 @@ export const products = [
         forceVertical: false,
       },
     ],
-    instructions: [],
+    instructions: [
+      {
+        name: 'Велледиен_ИМП',
+        pdfName: 'Velledien_imp',
+        forceVertical: true,
+      },
+    ],
   },
   {
     id: 'vidora',
@@ -153,7 +159,18 @@ export const products = [
     },
     materials: [],
     prezentations: [],
-    instructions: [],
+    instructions: [
+      {
+        name: 'Видора микро_обновленная ИМП № ЛП-002881-100820',
+        pdfName: 'vidara_micro',
+        forceVertical: true,
+      },
+      {
+        name: 'Видора_обновленная инструкция_23.09.2020',
+        pdfName: 'vidara_micro_2',
+        forceVertical: true,
+      },
+    ],
   },
   {
     id: 'dieticlen',
