@@ -212,9 +212,32 @@ export const products = [
     subtitle: 'Диеногест 2 мг + ЭЭ 0,03 мг',
     description:
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
-    materials: [],
-    prezentations: [],
-    instructions: [],
+    materials: [
+      {
+        name: 'Диециклен_клинический разбор',
+        pdfName: 'diec_m_1',
+        forceVertical: false,
+      },
+      {
+        name: 'Исакова_Диециклен_клинический разбор',
+        pdfName: 'diec_m_2',
+        forceVertical: false,
+      },
+    ],
+    prezentations: [
+      {
+        name: 'Диециклен_ИМП',
+        pdfName: 'diec',
+        forceVertical: false,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Диециклен_ИМП',
+        pdfName: 'diec_imp',
+        forceVertical: true,
+      },
+    ],
   },
   {
     id: 'eoeli',
