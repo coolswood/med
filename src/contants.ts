@@ -249,8 +249,20 @@ export const products = [
       'Инновационный КОК:\n' +
       'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
     materials: [],
-    prezentations: [],
-    instructions: [],
+    prezentations: [
+      {
+        name: 'Зоэли',
+        pdfName: 'eol',
+        forceVertical: false,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Зоэли_изм № 4 к ИМП_24.09.2019',
+        pdfName: 'eol_in',
+        forceVertical: true,
+      },
+    ],
   },
   {
     id: 'lizegora',
@@ -261,9 +273,27 @@ export const products = [
     description:
       'Противоопухолевое средство, аналог гонадотропин-рилизинг гормона.\n' +
       'Показания к применению: рак предстательной железы, рак молочной железы, эндометриоз, фиброма матки, для истончения эндометрия при планируемых операциях на эндометрии, при экстракорпоральном оплодотворении.',
-    materials: [],
-    prezentations: [],
-    instructions: [],
+    materials: [
+      {
+        name: 'Лизегора_Презентер',
+        pdfName: 'lizegora_m',
+        forceVertical: false,
+      },
+    ],
+    prezentations: [
+      {
+        name: 'Буклет ЛИЗЕГОРА',
+        pdfName: 'lizegora',
+        forceVertical: false,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Лизегора. Инструкция',
+        pdfName: 'lizegora_istr',
+        forceVertical: true,
+      },
+    ],
   },
 ];
 
