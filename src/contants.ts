@@ -216,7 +216,7 @@ export const products = [
       {
         name: 'Диециклен_клинический разбор',
         pdfName: 'diec_m_1',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Исакова_Диециклен_клинический разбор',

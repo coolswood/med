@@ -141,10 +141,7 @@ export default () => {
                             onRenderSuccess={onRenderSuccess}
                             onLoadSuccess={e => {
                               if (forceVertical === 'false') {
-                                setHorizontalPosition(
-                                  forceVertical === 'false' ||
-                                    e.width > e.height
-                                );
+                                setHorizontalPosition(e.width > e.height);
                               }
                             }}
                             pageNumber={index + 1}
