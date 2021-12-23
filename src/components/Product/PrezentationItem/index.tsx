@@ -24,7 +24,7 @@ export default ({
       className={styles.wrap}
     >
       <img src={file} alt="" />
-      <div className={styles.text}>{name}</div>
+      <span className={styles.text}>{name}</span>
     </Link>
   );
 };
