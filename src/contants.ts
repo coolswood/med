@@ -30,55 +30,45 @@ export const products = [
       'Алвовизан эффективен в лечении эндометриоза, как аГнРг, считающиеся стандартом терапии данного заболевания. Препарат обладает отличным профилем безопасности и переносимости, поэтому предназначен для длительного применения.',
     materials: [
       {
-        name: 'Диеногест в лечении тазовой боли',
-        pdfName: 'Dienogest_v_lechenii_tazovoj_boli',
+        name: 'Буклет Диеногест VS AГНРГ',
+        pdfName: 'alvizan_m_1',
         forceVertical: true,
       },
       {
-        name: 'Исследование по биоэквивалентности',
-        pdfName: 'Issledovanie_po_bioekvivalentnosti',
+        name: 'Буклет Диеногест VS хирургическое вмешательство',
+        pdfName: 'alvizan_m_2',
         forceVertical: true,
       },
       {
-        name: 'Исследование по подбору доз диеногеста',
-        pdfName: 'Issledovanie_po_podboru_doz_dienogesta',
+        name: 'Буклет Диеногест VS КОК',
+        pdfName: 'alvizan_m_3',
         forceVertical: true,
       },
       {
-        name: 'Применение диеногеста при длительном лечении эндометриоза',
-        pdfName: 'Primenenie_dienogesta',
+        name: 'Буклет Диеногест в лечении тазовой боли, связанной с эндометриозом',
+        pdfName: 'alvizan_m_4',
         forceVertical: true,
       },
       {
-        name: 'Сравнительные исследования диеногеста с аГнРГ',
-        pdfName: 'Sravnitelnye_issledovaniya',
+        name: 'Буклет Исследование биоэквивалентности',
+        pdfName: 'alvizan_m_5',
+        forceVertical: true,
+      },
+      {
+        name: 'Буклет Применение Диеногеста при длительном лечении эндометриоза',
+        pdfName: 'alvizan_m_6',
+        forceVertical: true,
+      },
+      {
+        name: 'Буклет Протоколы лечения эндометриоза. российские и международные',
+        pdfName: 'alvizan_m_7',
         forceVertical: true,
       },
     ],
     prezentations: [
       {
-        name: 'Кровотечения при приеме диеногеста',
-        pdfName: 'Krovotecheniya_pri_prieme_dienogesta',
-        forceVertical: true,
-      },
-      {
-        name: 'Материалы основные',
-        pdfName: 'Materialy_osnovnye',
-        forceVertical: true,
-      },
-      {
-        name: 'Отличие диеногестиа от других прогестинов',
-        pdfName: 'Otlichie_dienogestia_ot_drugix_progestinov',
-        forceVertical: true,
-      },
-      {
-        name: 'Предотвращение рецедивов эндометриоза',
-        pdfName: 'Predotvrashhenie_recedivov_endometrioza',
-        forceVertical: true,
-      },
-      {
-        name: 'Сравнение КОК и диеногеста',
-        pdfName: 'Sravnenie_KOK_i_dienogesta',
+        name: 'Эффективность и безопасность',
+        pdfName: 'alvizan_p',
         forceVertical: true,
       },
     ],
