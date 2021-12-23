@@ -32,54 +32,54 @@ export const products = [
       {
         name: 'Диеногест в лечении тазовой боли',
         pdfName: 'Dienogest_v_lechenii_tazovoj_boli',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Исследование по биоэквивалентности',
         pdfName: 'Issledovanie_po_bioekvivalentnosti',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Исследование по подбору доз диеногеста',
         pdfName: 'Issledovanie_po_podboru_doz_dienogesta',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Применение диеногеста при длительном лечении эндометриоза',
         pdfName: 'Primenenie_dienogesta',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Сравнительные исследования диеногеста с аГнРГ',
         pdfName: 'Sravnitelnye_issledovaniya',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     prezentations: [
       {
         name: 'Кровотечения при приеме диеногеста',
         pdfName: 'Krovotecheniya_pri_prieme_dienogesta',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Материалы основные',
         pdfName: 'Materialy_osnovnye',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Отличие диеногестиа от других прогестинов',
         pdfName: 'Otlichie_dienogestia_ot_drugix_progestinov',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Предотвращение рецедивов эндометриоза',
         pdfName: 'Predotvrashhenie_recedivov_endometrioza',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Сравнение КОК и диеногеста',
         pdfName: 'Sravnenie_KOK_i_dienogesta',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [
@@ -103,34 +103,34 @@ export const products = [
       {
         name: 'Буклет Велледиен (Тиболон)',
         pdfName: 'Buklet_Velledien_Tibolon',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №1',
         pdfName: 'Velledien_Klinicheskij_sluchaj_1',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №2',
         pdfName: 'Velledien_Klinicheskij_sluchaj_2',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №3',
         pdfName: 'Velledien_Klinicheskij_sluchaj_3',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №4',
         pdfName: 'Velledien_Klinicheskij_sluchaj_4',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     prezentations: [
       {
         name: 'Велледиен',
         pdfName: 'Velledien',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [
@@ -161,34 +161,34 @@ export const products = [
       {
         name: 'Видора Микро 21+7_клинический разбор',
         pdfName: 'vid_m_1',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Видора Микро 24+4_клинический разбор',
         pdfName: 'vid_m_2',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Видора_клинический разбор',
         pdfName: 'vid_m_3',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Исакова_Видора Микро_клинический разбор',
         pdfName: 'vid_m_4',
-        forceVertical: false,
+        forceVertical: true,
       },
       {
         name: 'Исакова_Видора_клинический разбор',
         pdfName: 'vid_m_5',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     prezentations: [
       {
         name: 'Видора',
         pdfName: 'vid_p',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [
@@ -221,14 +221,14 @@ export const products = [
       {
         name: 'Исакова_Диециклен_клинический разбор',
         pdfName: 'diec_m_2',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     prezentations: [
       {
         name: 'Диециклен_ИМП',
         pdfName: 'diec',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [
@@ -253,7 +253,7 @@ export const products = [
       {
         name: 'Зоэли',
         pdfName: 'eol',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [
@@ -277,14 +277,14 @@ export const products = [
       {
         name: 'Лизегора_Презентер',
         pdfName: 'lizegora_m',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     prezentations: [
       {
         name: 'Буклет ЛИЗЕГОРА',
         pdfName: 'lizegora',
-        forceVertical: false,
+        forceVertical: true,
       },
     ],
     instructions: [

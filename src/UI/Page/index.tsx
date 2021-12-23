@@ -50,7 +50,7 @@ export default ({
               fontSize: 10,
             }}
           >
-            Версия: 10
+            Версия: 11
           </div>
           <div
             style={{
