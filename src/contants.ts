@@ -30,6 +30,11 @@ export const products = [
       'Алвовизан эффективен в лечении эндометриоза, как аГнРг, считающиеся стандартом терапии данного заболевания. Препарат обладает отличным профилем безопасности и переносимости, поэтому предназначен для длительного применения.',
     materials: [
       {
+        name: 'Эффективность и безопасность',
+        pdfName: 'alvizan_p',
+        forceVertical: true,
+      },
+      {
         name: 'Буклет Диеногест VS AГНРГ',
         pdfName: 'alvizan_m_1',
         forceVertical: true,
@@ -67,8 +72,8 @@ export const products = [
     ],
     prezentations: [
       {
-        name: 'Эффективность и безопасность',
-        pdfName: 'alvizan_p',
+        name: 'Алвовизан',
+        pdfName: 'alvizan_p_m',
         forceVertical: true,
       },
     ],
@@ -90,6 +95,11 @@ export const products = [
       'Лечение симптомов эстрогенной недостаточности у женщин в постменопаузальном периоде (не ранее\n' +
       'чем через 1 год после последней менструации при наступлении естественной менопаузы или сразу после хирургической менопаузы.',
     materials: [
+      {
+        name: 'Велледиен',
+        pdfName: 'Velledien',
+        forceVertical: true,
+      },
       {
         name: 'Буклет Велледиен (Тиболон)',
         pdfName: 'Buklet_Velledien_Tibolon',
@@ -119,7 +129,7 @@ export const products = [
     prezentations: [
       {
         name: 'Велледиен',
-        pdfName: 'Velledien',
+        pdfName: 'Velledien_m',
         forceVertical: true,
       },
     ],
@@ -149,6 +159,11 @@ export const products = [
     },
     materials: [
       {
+        name: 'Видора',
+        pdfName: 'vid_p',
+        forceVertical: true,
+      },
+      {
         name: 'Видора Микро 21+7_клинический разбор',
         pdfName: 'vid_m_1',
         forceVertical: true,
@@ -177,7 +192,7 @@ export const products = [
     prezentations: [
       {
         name: 'Видора',
-        pdfName: 'vid_p',
+        pdfName: 'vid_p_m',
         forceVertical: true,
       },
     ],
@@ -204,6 +219,11 @@ export const products = [
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
     materials: [
       {
+        name: 'Диециклен_ИМП',
+        pdfName: 'diec',
+        forceVertical: true,
+      },
+      {
         name: 'Диециклен_клинический разбор',
         pdfName: 'diec_m_1',
         forceVertical: true,
@@ -216,8 +236,8 @@ export const products = [
     ],
     prezentations: [
       {
-        name: 'Диециклен_ИМП',
-        pdfName: 'diec',
+        name: 'Диециклен',
+        pdfName: 'diec_m',
         forceVertical: true,
       },
     ],
@@ -238,17 +258,23 @@ export const products = [
     description:
       'Инновационный КОК:\n' +
       'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
-    materials: [],
-    prezentations: [
+    materials: [
       {
         name: 'Зоэли',
         pdfName: 'eol',
         forceVertical: true,
       },
     ],
+    prezentations: [
+      {
+        name: 'Зоэли',
+        pdfName: 'eol_m',
+        forceVertical: true,
+      },
+    ],
     instructions: [
       {
-        name: 'Зоэли_изм № 4 к ИМП_24.09.2019',
+        name: 'Зоэли ИМП',
         pdfName: 'eol_in',
         forceVertical: true,
       },
