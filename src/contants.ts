@@ -72,8 +72,18 @@ export const products = [
     ],
     prezentations: [
       {
-        name: 'Алвовизан',
-        pdfName: 'alvizan_p_m',
+        name: 'Алвовизан 1',
+        pdfName: 'alvizan_p_m_1',
+        forceVertical: true,
+      },
+      {
+        name: 'Алвовизан 2',
+        pdfName: 'alvizan_p_m_2',
+        forceVertical: true,
+      },
+      {
+        name: 'Алвовизан 3',
+        pdfName: 'alvizan_p_m_3',
         forceVertical: true,
       },
     ],
@@ -268,7 +278,7 @@ export const products = [
     prezentations: [
       {
         name: 'Зоэли',
-        pdfName: 'eol_m',
+        pdfName: 'eol_m_new',
         forceVertical: true,
       },
     ],
