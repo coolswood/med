@@ -1,5 +1,5 @@
 .bg {
-    background-color: #B5ACAC;
+    background-color: #2F2F34;
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -7,7 +7,6 @@
     left: 0;
     z-index: -1;
     background-size: cover;
-    background-image: url('./bg.jpg');
 }
 
 .root {
@@ -27,8 +26,8 @@
     margin-bottom: 35px;
     font-size: 30px;
     cursor: pointer;
-    color: #432E33;
-    fill: #432E33;
+    color: #F7E5E0;
+    fill: #F7E5E0;
     display: flex;
     align-items: center;
 }
@@ -40,13 +39,12 @@
 }
 
 .bottom {
-    background: linear-gradient(180deg, #C0B2B5 0%, rgba(192, 178, 181, 0) 100%);
+    background: #F9D2D6;
     height: 65px;
     width: 100%;
     position: fixed;
     bottom: 0;
     left: 0;
-    border-top: 1px solid #F0E9E7;
     color: #fff;
     fill: #fff;
     display: flex;

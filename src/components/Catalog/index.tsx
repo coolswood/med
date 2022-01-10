@@ -24,7 +24,7 @@ export default () => {
           style={{
             fontSize: 18,
             fontWeight: 600,
-            color: '#432E33',
+            color: '#F7E5E0',
           }}
         >
           Продукты
@@ -32,7 +32,7 @@ export default () => {
         <div
           style={{
             fontSize: 36,
-            color: '#F0E9E7',
+            color: '#F9D2D6',
             fontWeight: 'bold',
           }}
         >

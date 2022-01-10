@@ -16,7 +16,7 @@ export default () => {
           marginBottom: 50,
           marginTop: 150,
           fontSize: 60,
-          color: '#F0E9E7',
+          color: '#F9D2D6',
           fontWeight: 'bold',
         }}
       >

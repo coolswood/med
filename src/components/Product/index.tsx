@@ -46,7 +46,7 @@ export default () => {
             top: 0,
             right: 0,
             height: '100%',
-            zIndex: -1,
+            zIndex: 1,
           }}
           src={picture}
           alt=""
@@ -63,7 +63,7 @@ export default () => {
             />
             <div
               style={{
-                color: '#432E33',
+                color: '#2F2F34',
                 marginBottom: 5,
                 fontSize: 30,
                 fontWeight: 'bold',
@@ -73,7 +73,7 @@ export default () => {
             </div>
             <div
               style={{
-                color: '#432E33',
+                color: '#2F2F34',
                 marginBottom: 20,
                 fontSize: 18,
               }}
@@ -98,7 +98,6 @@ export default () => {
               />
               <div
                 style={{
-                  color: '#432E33',
                   marginBottom: 5,
                   fontSize: 30,
                   fontWeight: 'bold',
@@ -108,7 +107,6 @@ export default () => {
               </div>
               <div
                 style={{
-                  color: '#432E33',
                   marginBottom: 20,
                   fontSize: 18,
                 }}

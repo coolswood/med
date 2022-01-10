@@ -31,6 +31,7 @@ export default ({
             fontSize: 18,
             fontWeight: 500,
             marginTop: 5,
+            color: '#F7E5E0',
           }}
         >
           {type}
