@@ -32,7 +32,7 @@ export const products = [
       {
         name: 'Эффективность и безопасность',
         pdfName: 'alvizan_p',
-        forceVertical: true,
+        forceVertical: false,
       },
       {
         name: 'Буклет Диеногест VS AГНРГ',
@@ -171,7 +171,7 @@ export const products = [
       {
         name: 'Видора',
         pdfName: 'vid_p',
-        forceVertical: true,
+        forceVertical: false,
       },
       {
         name: 'Видора Микро 21+7_клинический разбор',
@@ -268,13 +268,7 @@ export const products = [
     description:
       'Инновационный КОК:\n' +
       'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
-    materials: [
-      {
-        name: 'Зоэли',
-        pdfName: 'eol',
-        forceVertical: true,
-      },
-    ],
+    materials: [],
     prezentations: [
       {
         name: 'Зоэли',
