@@ -268,7 +268,18 @@ export const products = [
     description:
       'Инновационный КОК:\n' +
       'первый монофазный эстрадиол, содержащий комбинированный оральный контрацептив.',
-    materials: [],
+    materials: [
+      {
+        name: 'ZOELY исследования (Канада)',
+        pdfName: 'Australian-Zoely-Sales-Aid',
+        forceVertical: false,
+      },
+      {
+        name: 'ZOELY исследования (Австралия)',
+        pdfName: 'Zoely-Sales-Aid-UK_ru',
+        forceVertical: false,
+      },
+    ],
     prezentations: [
       {
         name: 'Зоэли',
