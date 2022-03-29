@@ -247,7 +247,7 @@ export const products = [
     prezentations: [
       {
         name: 'Диециклен',
-        pdfName: 'diec_m',
+        pdfName: 'diec_m_pppp',
         forceVertical: true,
       },
     ],
