@@ -31,7 +31,7 @@ export const products = [
     materials: [
       {
         name: 'Эффективность и безопасность',
-        pdfName: 'alvizan_p',
+        pdfName: 'alvizan_p_new',
         forceVertical: false,
       },
       {
@@ -41,7 +41,7 @@ export const products = [
       },
       {
         name: 'Буклет Диеногест VS хирургическое вмешательство',
-        pdfName: 'alvizan_m_2',
+        pdfName: 'alvizan_m_2_new',
         forceVertical: true,
       },
       {
@@ -106,33 +106,28 @@ export const products = [
       'чем через 1 год после последней менструации при наступлении естественной менопаузы или сразу после хирургической менопаузы.',
     materials: [
       {
-        name: 'Велледиен',
-        pdfName: 'Velledien',
-        forceVertical: true,
-      },
-      {
         name: 'Буклет Велледиен (Тиболон)',
         pdfName: 'Buklet_Velledien_Tibolon',
         forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №1',
-        pdfName: 'Velledien_Klinicheskij_sluchaj_1',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_1_new',
         forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №2',
-        pdfName: 'Velledien_Klinicheskij_sluchaj_2',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_2_new',
         forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №3',
-        pdfName: 'Velledien_Klinicheskij_sluchaj_3',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_3_new',
         forceVertical: true,
       },
       {
         name: 'Велледиен. Клинический случай №4',
-        pdfName: 'Velledien_Klinicheskij_sluchaj_4',
+        pdfName: 'Velledien_Klinicheskij_sluchaj_4_new',
         forceVertical: true,
       },
     ],
@@ -169,33 +164,28 @@ export const products = [
     },
     materials: [
       {
-        name: 'Видора',
-        pdfName: 'vid_p',
-        forceVertical: false,
-      },
-      {
         name: 'Видора Микро 21+7_клинический разбор',
-        pdfName: 'vid_m_1',
+        pdfName: 'vid_m_1_new',
         forceVertical: true,
       },
       {
         name: 'Видора Микро 24+4_клинический разбор',
-        pdfName: 'vid_m_2',
+        pdfName: 'vid_m_2_new',
         forceVertical: true,
       },
       {
         name: 'Видора_клинический разбор',
-        pdfName: 'vid_m_3',
+        pdfName: 'vid_m_3_new',
         forceVertical: true,
       },
       {
         name: 'Исакова_Видора Микро_клинический разбор',
-        pdfName: 'vid_m_4',
+        pdfName: 'vid_m_4_new',
         forceVertical: true,
       },
       {
         name: 'Исакова_Видора_клинический разбор',
-        pdfName: 'vid_m_5',
+        pdfName: 'vid_m_5_new',
         forceVertical: true,
       },
     ],
@@ -229,18 +219,13 @@ export const products = [
       'Лечение акне легкой и средней степени тяжести у женщин, нуждающихся в контрацепции, при неэффективности местного лечения.',
     materials: [
       {
-        name: 'Диециклен_ИМП',
-        pdfName: 'diec',
-        forceVertical: true,
-      },
-      {
         name: 'Диециклен_клинический разбор',
-        pdfName: 'diec_m_1',
+        pdfName: 'diec_m_1_new',
         forceVertical: true,
       },
       {
         name: 'Исакова_Диециклен_клинический разбор',
-        pdfName: 'diec_m_2',
+        pdfName: 'diec_m_2_new',
         forceVertical: true,
       },
     ],
@@ -307,7 +292,7 @@ export const products = [
     materials: [
       {
         name: 'Лизегора_Презентер',
-        pdfName: 'lizegora_m',
+        pdfName: 'lizegora_m_new',
         forceVertical: true,
       },
     ],
