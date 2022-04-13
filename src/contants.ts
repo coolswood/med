@@ -8,7 +8,7 @@ import vidora_2 from './img/products/vidora_2.png';
 
 import microginon from './img/bayer/microginon.png';
 import proginova from './img/bayer/proginova.png';
-import trikvilar from './img/bayer/trikvilar.png';
+// import trikvilar from './img/bayer/trikvilar.png';
 import klimen from './img/bayer/klimen.png';
 import klimonorm from './img/bayer/klimonorm.png';
 
@@ -311,16 +311,33 @@ export const products = [
       },
     ],
   },
-];
-
-export const bayer = [
   {
+    id: 'microginon',
     name: 'Микрогинон',
     img: microginon,
+    picture: Liz_2,
     subtitle: 'Левоноргестрел 150 мкг\n' + '+ ЭЭ30 мкг',
     description:
       'Для женщин с обильными\n' + 'менструациями и дисфункцией яичников.',
+    materials: [],
+    prezentations: [
+      {
+        name: 'Микрогинон',
+        pdfName: 'microginon',
+        forceVertical: true,
+      },
+    ],
+    instructions: [
+      {
+        name: 'Инструкция',
+        pdfName: 'microginon_instr',
+        forceVertical: true,
+      },
+    ],
   },
+];
+
+export const bayer = [
   {
     name: 'Прогинова',
     img: proginova,
@@ -328,13 +345,13 @@ export const bayer = [
     description:
       'Оптимальное средство коррекции уровня эстрогенов с доказанной эффективностью и безопасностью.',
   },
-  {
-    name: 'Триквилар',
-    img: trikvilar,
-    subtitle: 'Эстроген + Гестаген',
-    description:
-      'Для всех женщин репродуктивного возраста, у кого возникают головная боль, вздутие живота и боли в молочных железах на фоне приёма любого контрацептива.',
-  },
+  // {
+  //   name: 'Триквилар',
+  //   img: trikvilar,
+  //   subtitle: 'Эстроген + Гестаген',
+  //   description:
+  //     'Для всех женщин репродуктивного возраста, у кого возникают головная боль, вздутие живота и боли в молочных железах на фоне приёма любого контрацептива.',
+  // },
   {
     name: 'Климен',
     img: klimen,
