@@ -73,24 +73,34 @@ export const products = [
     prezentations: [
       {
         name: 'Алвовизан 1',
-        pdfName: 'alvizan_p_m_1',
+        pdfName: 'alvizan_p_m_1_new',
         forceVertical: true,
       },
       {
         name: 'Алвовизан 2',
-        pdfName: 'alvizan_p_m_2',
+        pdfName: 'alvizan_p_m_2_new',
         forceVertical: true,
       },
       {
         name: 'Алвовизан 3',
-        pdfName: 'alvizan_p_m_3',
+        pdfName: 'alvizan_p_m_3_new',
         forceVertical: true,
       },
     ],
     instructions: [
       {
         name: 'Инструкция',
-        pdfName: 'alvizan_instr',
+        pdfName: 'alvizan_instrr',
+        forceVertical: true,
+      },
+      {
+        name: 'Инструкция с микронизированным диеногестом',
+        pdfName: 'alvizan_instr_new',
+        forceVertical: true,
+      },
+      {
+        name: 'Только у Алвовизана и Визанны разрешено применение с 12 лет!',
+        pdfName: 'alvizan_instr_12',
         forceVertical: true,
       },
     ],
