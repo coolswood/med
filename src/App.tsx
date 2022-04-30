@@ -3,6 +3,7 @@ import Catalog from 'components/Catalog';
 import Home from 'components/Home';
 import Pdf from 'components/Pdf';
 import Product from 'components/Product';
+import Zoely from 'components/NewProducts/Zoely';
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import * as Sentry from '@sentry/react';
@@ -21,6 +22,7 @@ export default () => {
         path={'/prezentation/:type/:name/:id/:forceVertical'}
         component={() => <Pdf />}
       />
+      <Route exact path={'/product/eoeli'} component={() => <Zoely />} />
       <Route path={'/product/:id'} component={() => <Product />} />
       <Route path={'/bayer'} component={() => <Bayer />} />
       <Route path={'/'} component={() => <Catalog />} />
