@@ -333,7 +333,7 @@ export const products = [
     prezentations: [
       {
         name: 'Микрогинон',
-        pdfName: 'microginon',
+        pdfName: 'microginon_new',
         forceVertical: true,
       },
     ],
