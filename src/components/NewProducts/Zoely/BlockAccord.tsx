@@ -40,7 +40,7 @@ export default () => {
       >
         <div className="accord_block_item">
           <div className="accord_block_img">
-            <img src={accord_1} alt="" />
+            <img width={120} src={accord_1} alt="" />
           </div>
           <h4 className="accord_block_h">ЭТИНИЛЭСТРАДИОЛ</h4>
           <div className="accord_block_text">
@@ -49,14 +49,14 @@ export default () => {
         </div>
         <div className="accord_block_item">
           <div className="accord_block_img">
-            <img src={accord_2} alt="" />
+            <img width={120} src={accord_2} alt="" />
           </div>
           <h4 className="accord_block_h">ЭСТРАДИОЛА ВАЛЕРАТ</h4>
           <div className="accord_block_text">Клайра</div>
         </div>
         <div className="accord_block_item accord_block_item__pink">
           <div className="accord_block_img">
-            <img src={accord_3} alt="" />
+            <img width={120} src={accord_3} alt="" />
           </div>
           <h4 className="accord_block_h">17β-ЭСТРАДИОЛ</h4>
           <div className="accord_block_text">

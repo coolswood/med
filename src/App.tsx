@@ -1,6 +1,5 @@
 import Bayer from 'components/Bayer';
 import Catalog from 'components/Catalog';
-import Home from 'components/Home';
 import Pdf from 'components/Pdf';
 import Product from 'components/Product';
 import Zoely from 'components/NewProducts/Zoely';

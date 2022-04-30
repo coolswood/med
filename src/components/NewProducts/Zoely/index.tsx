@@ -16,50 +16,16 @@ import q from './img/q.svg';
 import BlockAccord from './BlockAccord';
 import BlockOral from './BlockOral';
 import ItemPlus from './ItemPlus';
-
-export type pdfType = 'Иструкции' | 'Материалы' | 'Презентации' | '';
+import BlockWhite from './BlockWhite';
+import Tabs from './Tabs';
 
 export default () => {
-  const {
-    name,
-    subtitle,
-    description,
-    img,
-    prezentations,
-    materials,
-    addedDescription,
-    picture,
-    instructions,
-  } = products.find(i => i.id === 'eoeli')!;
+  const { name, subtitle, description, img, addedDescription, picture } =
+    products.find(i => i.id === 'eoeli')!;
 
   return (
     <Page backText="Продукты">
-      <div className={style.buttons}>
-        {instructions.length !== 0 && (
-          <div
-            onClick={() => {}}
-            className={clsx(styles.mainBtn, styles.shitEffects)}
-          >
-            Иструкции
-          </div>
-        )}
-        {materials.length !== 0 && (
-          <div
-            onClick={() => {}}
-            className={clsx(styles.mainBtn, styles.shitEffects)}
-          >
-            Материалы
-          </div>
-        )}
-        {prezentations.length !== 0 && (
-          <div
-            onClick={() => {}}
-            className={clsx(styles.mainBtn, styles.shitEffects)}
-          >
-            Презентации
-          </div>
-        )}
-      </div>
+      <Tabs />
       <div className="row row-2">
         <div
           style={{
@@ -105,6 +71,7 @@ export default () => {
           style={{
             height: 220,
             background: `url(${one})`,
+            backgroundSize: 'cover',
           }}
           className="box"
         ></div>
@@ -271,6 +238,7 @@ export default () => {
             }}
           >
             <ItemPlus
+              isPlus
               isWhite
               text={
                 'Период полувыведения Zoely® составляет 46 часов. Это больше, чем у любого другого КОК, представленного сегодня на рынке контрацептивов'
@@ -283,6 +251,7 @@ export default () => {
             }}
           >
             <ItemPlus
+              isPlus
               isWhite
               text={
                 'Восстановление фертильности после его применения составляет в среднем 21 день, что согласуется с данными по другим оральным контрацептивам'
@@ -302,6 +271,8 @@ export default () => {
           className="box"
         ></div>
       </div>
+      <div style={{ height: 20 }}></div>
+      <BlockWhite />
       <div style={{ height: 20 }}></div>
       <div
         style={{
@@ -359,36 +330,42 @@ export default () => {
           }}
         >
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Содержит номегэстрола ацетат — высокоселективный прогестаген на основе прогестерона, и 17β-эстрадиол, который структурно идентичен эндогенному эстрогену'
             }
           />
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Отсутствие влияния на показатели артериального давления, углеводный обмен, систему гемостаза, минеральную плотность костей, появление акне'
             }
           />
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Монофазный режим дозирования: 24 активных таблетки и 4 таблетки плацебо'
             }
           />
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Высокая контрацептивная эффективность — более 99% (индекс Перля 0,38)'
             }
           />
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Более короткое и менее интенсивное кровотечение отмены по сравнению с другими КОК'
             }
           />
           <ItemPlus
+            isPlus
             isWhite
             text={
               'Удобен в случае пропущенной таблетки из-за длительного периода полувыведения (46 часов)'

@@ -1,8 +1,8 @@
 import ok from 'components/NewProducts/Zoely/img/ok.svg';
+import plus from 'components/NewProducts/Zoely/img/plus.svg';
 import React from 'react';
 
-export default ({ text, isWhite = false }: any) => {
-  console.log(isWhite);
+export default ({ text, isWhite = false, isPlus = false }: any) => {
   return (
     <div
       style={{
@@ -10,7 +10,7 @@ export default ({ text, isWhite = false }: any) => {
         alignItems: 'start',
       }}
     >
-      <img width={33} height={33} src={ok} alt="" />
+      <img width={33} height={33} src={isPlus ? plus : ok} alt="" />
       <div
         style={{
           marginLeft: 23,
