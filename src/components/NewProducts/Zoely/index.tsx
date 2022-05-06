@@ -1,16 +1,13 @@
 import React from 'react';
 import Page from 'UI/Page';
 
-import styles from 'components/common.module.scss';
-import style from 'components/Product/styles.module.scss';
-import clsx from 'clsx';
-import { products } from 'contants';
-
 import one from './img/1.jpg';
 import second from './img/2.jpg';
 import tree from './img/3.jpg';
 import four from './img/4.jpg';
 import graph from './img/graph.png';
+import fon from './img/fon.png';
+import prod from './img/prod.png';
 import finish from './img/finish.jpg';
 import q from './img/q.svg';
 import BlockAccord from './BlockAccord';
@@ -20,9 +17,6 @@ import BlockWhite from './BlockWhite';
 import Tabs from './Tabs';
 
 export default () => {
-  const { name, subtitle, description, img, addedDescription, picture } =
-    products.find(i => i.id === 'eoeli')!;
-
   return (
     <Page backText="Продукты">
       <Tabs />
@@ -78,86 +72,68 @@ export default () => {
       </div>
       <div style={{ height: 20 }}></div>
       <div
-        style={{ marginBottom: 0 }}
-        className={clsx(style.productLine, styles.shitEffects)}
+        style={{
+          background: '#F9D2D6',
+          position: 'relative',
+        }}
+        className="box"
       >
+        <div
+          style={{
+            width: 380,
+            padding: 34,
+          }}
+        >
+          <img
+            style={{
+              width: 260,
+              height: 170,
+            }}
+            src={prod}
+            alt=""
+          />
+          <div
+            style={{
+              fontSize: 28,
+              fontWeight: 600,
+              color: '#2F2F34',
+              marginTop: 20,
+            }}
+          >
+            Zoely®
+          </div>
+          <div
+            style={{
+              fontSize: 27,
+              fontWeight: 700,
+              color: '#fff',
+              marginTop: 20,
+            }}
+          >
+            ИННОВАЦИОННЫЙ КОК
+          </div>
+          <div
+            style={{
+              fontSize: 16,
+              fontWeight: 400,
+              color: '#2F2F34',
+              marginTop: 10,
+            }}
+          >
+            Первый монофазный эстрадиол содержащий комбинированный оральный
+            контрацептив.
+          </div>
+        </div>
         <img
           style={{
             position: 'absolute',
-            top: 0,
             right: 0,
+            top: 0,
             height: '100%',
-            zIndex: 1,
           }}
-          src={picture}
+          src={fon}
           alt=""
         />
-        <div className={style.container}>
-          <div>
-            <img
-              style={{
-                marginBottom: 20,
-              }}
-              className={style.productPic}
-              src={img}
-              alt=""
-            />
-            <div
-              style={{
-                color: '#2F2F34',
-                marginBottom: 5,
-                fontSize: 30,
-                fontWeight: 'bold',
-              }}
-            >
-              {name}
-            </div>
-            <div
-              style={{
-                color: '#2F2F34',
-                marginBottom: 20,
-                fontSize: 18,
-              }}
-            >
-              {subtitle}
-            </div>
-            <div>{description}</div>
-          </div>
-          {addedDescription && (
-            <div
-              style={{
-                marginLeft: 20,
-              }}
-            >
-              <img
-                style={{
-                  marginBottom: 20,
-                }}
-                className={style.productPic}
-                src={addedDescription.img}
-                alt=""
-              />
-              <div
-                style={{
-                  marginBottom: 5,
-                  fontSize: 30,
-                  fontWeight: 'bold',
-                }}
-              >
-                {addedDescription.name}
-              </div>
-              <div
-                style={{
-                  marginBottom: 20,
-                  fontSize: 18,
-                }}
-              >
-                {addedDescription.subtitle}
-              </div>
-              <div>{addedDescription.description}</div>
-            </div>
-          )}
-        </div>
       </div>
       <div style={{ height: 20 }}></div>
       <BlockAccord />

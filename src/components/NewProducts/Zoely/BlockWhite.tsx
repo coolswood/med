@@ -1,6 +1,6 @@
 import React from 'react';
 
-import section from './img/section.png';
+import section from './img/section.svg';
 
 export default () => {
   return (
