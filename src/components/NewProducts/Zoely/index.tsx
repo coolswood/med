@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Page from 'UI/Page';
 
 import one from './img/1.jpg';
@@ -15,11 +15,18 @@ import BlockOral from './BlockOral';
 import ItemPlus from './ItemPlus';
 import BlockWhite from './BlockWhite';
 import Tabs from './Tabs';
+import Overlay from 'UI/Overlay';
+import Instructions from './overlays/Instructions';
 
 export default () => {
+  const [overContent, setOverContent] = useState<any>(null);
+
   return (
     <Page backText="Продукты">
-      <Tabs />
+      {overContent && (
+        <Overlay onClose={() => setOverContent(null)}>{overContent}</Overlay>
+      )}
+      <Tabs openInstruction={() => setOverContent(<Instructions />)} />
       <div className="row row-2">
         <div
           style={{

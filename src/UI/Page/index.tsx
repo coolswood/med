@@ -48,6 +48,7 @@ export default ({
               top: '50%',
               transform: 'translate(0,-50%)',
               fontSize: 10,
+              zIndex: 101,
             }}
           >
             Версия: 26

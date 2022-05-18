@@ -31,7 +31,7 @@ export default () => {
             boxSizing: 'border-box',
             padding: '20px',
             borderRadius: 12,
-            height: 260,
+            minHeight: 270,
           }}
         >
           <h4
@@ -74,7 +74,7 @@ export default () => {
             boxSizing: 'border-box',
             padding: '20px',
             borderRadius: 12,
-            height: 260,
+            minHeight: 270,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',

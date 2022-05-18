@@ -6,7 +6,7 @@ import PrezentationItem from 'components/Product/PrezentationItem';
 import Popup from 'UI/Popup';
 import { pdfType } from 'components/Product';
 
-export default () => {
+export default ({ openInstruction }: any) => {
   const [selectedButton, setSelectedButton] = useState<pdfType>('');
   const [openedPopup, setOpenedPopup] = useState(false);
 
@@ -23,7 +23,7 @@ export default () => {
     <div>
       <div className={style.buttons}>
         <div
-          onClick={() => {}}
+          onClick={openInstruction}
           className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Иструкция
