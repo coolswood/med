@@ -145,7 +145,7 @@ export default () => {
       <div style={{ height: 20 }}></div>
       <BlockAccord />
       <div style={{ height: 20 }}></div>
-      <BlockOral />
+      <BlockOral onClick={() => setOverContent(<Instructions />)} />
       <div style={{ height: 20 }}></div>
       <div
         style={{

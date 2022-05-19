@@ -3,7 +3,7 @@ import React from 'react';
 import group from './img/group.png';
 import ItemPlus from './ItemPlus';
 
-export default () => {
+export default ({ onClick }: any) => {
   return (
     <div className="box">
       <h3
@@ -41,8 +41,11 @@ export default () => {
               color: '#2F2F34',
             }}
           >
-            Zoely® содержит номегэстрола ацетат (NOMAC) 2,5 мг в сочетании с
-            17β-эстрадиолом (Е2) 1,5 мг
+            Zoely® содержит{' '}
+            <span onClick={onClick} className="bluer_link">
+              номегэстрола ацетат (NOMAC)
+            </span>{' '}
+            2,5 мг в сочетании с 17β-эстрадиолом (Е2) 1,5 мг
           </h4>
           <div
             style={{
