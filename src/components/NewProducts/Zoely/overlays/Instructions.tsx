@@ -52,39 +52,40 @@ export default () => {
           style={{
             display: 'flex',
             flexDirection: 'column',
+            width: '50%',
           }}
         >
           <a className="link_active" href="#sostav">
             СОСТАВ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#opisanie">
             Описание
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#group">
             ФАРМАКОТЕРАПЕВТИЧЕСКАЯ ГРУППА
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#svo">
             ФАРМАКОЛОГИЧЕСКИЕ СВОЙСТВА
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#prim">
             ПОКАЗАНИЯ К ПРИМЕНЕНИЮ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#prot">
             ПРОТИВОПОКАЗАНИЯ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#ost">
             С ОСТОРОЖНОСТЬЮ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#berem">
             ПРИМЕНЕНИЕ ПРИ БЕРЕМЕННОСТИ И В ПЕРИОД ГРУДНОГО ВСКАРМЛИВАНИЯ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#spos">
             СПОСОБ ПРИМЕНЕНИЯ И ДОЗЫ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#pob">
             ПОБОЧНОЕ ДЕЙСТВИЕ
           </a>
-          <a className="link_active" href="">
+          <a className="link_active" href="#peredoz">
             ПЕРЕДОЗИРОВКА
           </a>
         </div>
@@ -92,40 +93,37 @@ export default () => {
           style={{
             display: 'flex',
             flexDirection: 'column',
+            width: '40%',
+            paddingLeft: '40px',
           }}
         >
-          <a className="link_active" href="#sostav">
-            СОСТАВ
+          <a className="link_active" href="#vzaim">
+            ВЗАИМОДЕЙСТВИЕ С ДРУГИМИ ЛЕКАРСТВЕННЫМИ СРЕДСТВАМИ
           </a>
-          <a className="link_active" href="">
-            Описание
+          <a className="link_active" href="#vli">
+            ВЛИЯНИЕ НА СПОСОБНОСТЬ УПРАВЛЯТЬ ТРАНСПОРТНЫМИ СРЕДСТВАМИ И РАБОТАТЬ
+            С МЕХАНИЗМАМИ
           </a>
-          <a className="link_active" href="">
-            ФАРМАКОТЕРАПЕВТИЧЕСКАЯ ГРУППА
+          <a className="link_active" href="#forma">
+            ФОРМА ВЫПУСКА
           </a>
-          <a className="link_active" href="">
-            ФАРМАКОЛОГИЧЕСКИЕ СВОЙСТВА
+          <a className="link_active" href="#uslov">
+            УСЛОВИЯ ХРАНЕНИЯ
           </a>
-          <a className="link_active" href="">
-            ПОКАЗАНИЯ К ПРИМЕНЕНИЮ
+          <a className="link_active" href="#srok">
+            СРОК ГОДНОСТИ
           </a>
-          <a className="link_active" href="">
-            ПРОТИВОПОКАЗАНИЯ
+          <a className="link_active" href="#otp">
+            УСЛОВИЯ ОТПУСКА
           </a>
-          <a className="link_active" href="">
-            С ОСТОРОЖНОСТЬЮ
+          <a className="link_active" href="#urid">
+            ЮРИДИЧЕСКОЕ ЛИЦО, НА ИМЯ КОТОРОГО ВЫДАНО
           </a>
-          <a className="link_active" href="">
-            ПРИМЕНЕНИЕ ПРИ БЕРЕМЕННОСТИ И В ПЕРИОД ГРУДНОГО ВСКАРМЛИВАНИЯ
+          <a className="link_active" href="#proiz">
+            Производитель
           </a>
-          <a className="link_active" href="">
-            СПОСОБ ПРИМЕНЕНИЯ И ДОЗЫ
-          </a>
-          <a className="link_active" href="">
-            ПОБОЧНОЕ ДЕЙСТВИЕ
-          </a>
-          <a className="link_active" href="">
-            ПЕРЕДОЗИРОВКА
+          <a className="link_active" href="#adress">
+            НАПРАВЛЯТЬ ПО АДРЕСУ
           </a>
         </div>
       </div>
@@ -143,28 +141,36 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">Описание</h2>
+      <h2 id="opisanie" className="h2_pink">
+        Описание
+      </h2>
       <img width={'100%'} src={opisanie} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ФАРМАКОТЕРАПЕВТИЧЕСКАЯ ГРУППА</h2>
+      <h2 id="group" className="h2_pink">
+        ФАРМАКОТЕРАПЕВТИЧЕСКАЯ ГРУППА
+      </h2>
       <img width={'100%'} src={group} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ФАРМАКОЛОГИЧЕСКИЕ СВОЙСТВА</h2>
+      <h2 id="svo" className="h2_pink">
+        ФАРМАКОЛОГИЧЕСКИЕ СВОЙСТВА
+      </h2>
       <img width={'100%'} src={svoistva} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПОКАЗАНИЯ К ПРИМЕНЕНИЮ</h2>
+      <h2 id="prim" className="h2_pink">
+        ПОКАЗАНИЯ К ПРИМЕНЕНИЮ
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -180,21 +186,25 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПРОТИВОПОКАЗАНИЯ</h2>
+      <h2 id="prot" className="h2_pink">
+        ПРОТИВОПОКАЗАНИЯ
+      </h2>
       <img width={'100%'} src={protivopokaz} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">С ОСТОРОЖНОСТЬЮ</h2>
+      <h2 id="ost" className="h2_pink">
+        С ОСТОРОЖНОСТЬЮ
+      </h2>
       <img width={'100%'} src={ostorojno} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">
+      <h2 id="berem" className="h2_pink">
         ПРИМЕНЕНИЕ ПРИ БЕРЕМЕННОСТИ И В ПЕРИОД ГРУДНОГО ВСКАРМЛИВАНИЯ
       </h2>
       <img width={'100%'} src={berem} alt="" />
@@ -203,21 +213,27 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">СПОСОБ ПРИМЕНЕНИЯ И ДОЗЫ</h2>
+      <h2 id="spos" className="h2_pink">
+        СПОСОБ ПРИМЕНЕНИЯ И ДОЗЫ
+      </h2>
       <img width={'100%'} src={sposob} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПОБОЧНОЕ ДЕЙСТВИЕ</h2>
+      <h2 id="pob" className="h2_pink">
+        ПОБОЧНОЕ ДЕЙСТВИЕ
+      </h2>
       <img width={'100%'} src={pobo} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПЕРЕДОЗИРОВКА</h2>
+      <h2 id="peredoz" className="h2_pink">
+        ПЕРЕДОЗИРОВКА
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -254,7 +270,7 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">
+      <h2 id="vli" className="h2_pink">
         ВЛИЯНИЕ НА СПОСОБНОСТЬ УПРАВЛЯТЬ ТРАНСПОРТНЫМИ СРЕДСТВАМИ И РАБОТАТЬ С
         МЕХАНИЗМАМИ
       </h2>
@@ -274,7 +290,9 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ФОРМА ВЫПУСКА</h2>
+      <h2 id="forma" className="h2_pink">
+        ФОРМА ВЫПУСКА
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -294,7 +312,9 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">УСЛОВИЯ ХРАНЕНИЯ</h2>
+      <h2 id="uslov" className="h2_pink">
+        УСЛОВИЯ ХРАНЕНИЯ
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -310,7 +330,9 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">СРОК ГОДНОСТИ</h2>
+      <h2 id="srok" className="h2_pink">
+        СРОК ГОДНОСТИ
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -326,7 +348,9 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">УСЛОВИЯ ОТПУСКА</h2>
+      <h2 id="otp" className="h2_pink">
+        УСЛОВИЯ ОТПУСКА
+      </h2>
       <span
         style={{
           fontSize: 16,
@@ -342,7 +366,7 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">
+      <h2 id="urid" className="h2_pink">
         ЮРИДИЧЕСКОЕ ЛИЦО, НА ИМЯ КОТОРОГО ВЫДАНО РЕГИСТРАЦИОННОЕ УДОСТОВЕРЕНИЕ
       </h2>
       <span
@@ -360,14 +384,18 @@ export default () => {
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПРОИЗВОДИТЕЛЬ</h2>
+      <h2 id="proiz" className="h2_pink">
+        ПРОИЗВОДИТЕЛЬ
+      </h2>
       <img width={'70%'} src={proizv} alt="" />
       <div
         style={{
           height: 40,
         }}
       ></div>
-      <h2 className="h2_pink">ПРЕТЕНЗИИ ПОТРЕБИТЕЛЕЙ НАПРАВЛЯТЬ ПО АДРЕСУ:</h2>
+      <h2 id="adress" className="h2_pink">
+        ПРЕТЕНЗИИ ПОТРЕБИТЕЛЕЙ НАПРАВЛЯТЬ ПО АДРЕСУ:
+      </h2>
       <img width={'70%'} src={pretenz} alt="" />
       <div
         style={{
