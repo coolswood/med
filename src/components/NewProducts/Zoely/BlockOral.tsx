@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import group from './img/group.png';
 import ItemPlus from './ItemPlus';
 
-export default ({ onClick }: any) => {
+export default () => {
   return (
     <div className="box">
       <h3

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import file from './file.svg';
+import video from './video.svg';
 
 import styles from './styles.module.scss';
 import { pdfType } from 'components/Product/index';
@@ -8,7 +9,8 @@ import { pdfType } from 'components/Product/index';
 type PrezentationItemType = {
   name: string;
   pdfName: string;
-  forceVertical: boolean;
+  forceVertical?: boolean;
+  icon?: 'video';
   type: pdfType;
 };
 
@@ -17,13 +19,18 @@ export default ({
   name,
   type,
   forceVertical,
+  icon,
 }: PrezentationItemType) => {
   return (
     <Link
-      to={`/prezentation/${type}/${name}/${pdfName}/${forceVertical}`}
+      to={
+        icon === 'video'
+          ? `/video/${type}/${pdfName}`
+          : `/prezentation/${type}/${name}/${pdfName}/${forceVertical}`
+      }
       className={styles.wrap}
     >
-      <img src={file} alt="" />
+      <img src={icon === 'video' ? video : file} alt="" />
       <span className={styles.text}>{name}</span>
     </Link>
   );

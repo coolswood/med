@@ -7,7 +7,7 @@ import Popup from 'UI/Popup';
 import { pdfType } from 'components/Product';
 import { Link } from 'react-router-dom';
 
-export default ({ openInstruction }: any) => {
+export default () => {
   const [selectedButton, setSelectedButton] = useState<pdfType>('');
   const [openedPopup, setOpenedPopup] = useState(false);
 
@@ -36,7 +36,7 @@ export default ({ openInstruction }: any) => {
           Материалы
         </div>
         <div
-          onClick={() => {}}
+          onClick={() => selectButton('Видео')}
           className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Видео
@@ -66,6 +66,21 @@ export default ({ openInstruction }: any) => {
               forceVertical={i.forceVertical}
               pdfName={i.pdfName}
               type={selectedButton}
+            />
+          ))}
+        {selectedButton === 'Видео' &&
+          [
+            {
+              name: 'ZOELY исследования (Канада)',
+              pdfName: 'isTKtns2qag',
+            },
+          ].map(i => (
+            <PrezentationItem
+              key={i.pdfName}
+              name={i.name}
+              pdfName={i.pdfName}
+              type={selectedButton}
+              icon={'video'}
             />
           ))}
       </Popup>

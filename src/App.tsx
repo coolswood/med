@@ -7,6 +7,7 @@ import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import * as Sentry from '@sentry/react';
 import Instructions from 'components/NewProducts/Zoely/overlays/Instructions';
+import Video from 'components/Video';
 
 export default () => {
   useEffect(() => {
@@ -22,6 +23,7 @@ export default () => {
         path={'/prezentation/:type/:name/:id/:forceVertical'}
         component={() => <Pdf />}
       />
+      <Route path={'/video/:type/:id'} component={() => <Video />} />
       <Route
         exact
         path={'/product/eoeli/instruction'}
