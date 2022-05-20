@@ -22,7 +22,7 @@ export default () => {
   const [overContent, setOverContent] = useState<any>(null);
 
   return (
-    <Page backText="Продукты">
+    <Page head={'ZOELY®'} backText="Продукты">
       {overContent && (
         <Overlay onClose={() => setOverContent(null)}>{overContent}</Overlay>
       )}

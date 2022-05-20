@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import PrezentationItem from 'components/Product/PrezentationItem';
 import Popup from 'UI/Popup';
 import { pdfType } from 'components/Product';
+import { Link } from 'react-router-dom';
 
 export default ({ openInstruction }: any) => {
   const [selectedButton, setSelectedButton] = useState<pdfType>('');
@@ -22,12 +23,12 @@ export default ({ openInstruction }: any) => {
   return (
     <div>
       <div className={style.buttons}>
-        <div
-          onClick={openInstruction}
+        <Link
+          to={'/product/eoeli/instruction'}
           className={clsx(styles.mainBtn, styles.shitEffects)}
         >
           Иструкция
-        </div>
+        </Link>
         <div
           onClick={() => selectButton('Материалы')}
           className={clsx(styles.mainBtn, styles.shitEffects)}

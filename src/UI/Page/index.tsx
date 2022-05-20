@@ -2,20 +2,26 @@ import Fade from '@material-ui/core/Fade';
 import BackIcon from '@material-ui/icons/ArrowBack';
 import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
+import ScrollToTop from 'react-scroll-to-top';
 
 import styles from './styles.module.scss';
 import clsx from 'clsx';
+import cross from 'UI/Overlay/cross.svg';
 
 export default ({
   children,
   noMargin,
   fullScreen,
   backText,
+  isCross,
+  head,
 }: {
   children: any;
   noMargin?: boolean;
   fullScreen?: boolean;
+  isCross?: boolean;
   backText?: string;
+  head?: string;
 }) => {
   const history = useHistory();
 
@@ -27,13 +33,63 @@ export default ({
 
   return (
     <div>
+      <ScrollToTop
+        style={{
+          bottom: 90,
+          width: 55,
+          height: 55,
+          right: 20,
+          borderRadius: '50%',
+          boxShadow: 'none',
+          backgroundColor: '#F0E9E7',
+        }}
+        viewBox="0 0 22 20"
+        svgPath={
+          'M10.367.133c-.205.08-.392.199-.55.35L1.483 8.817a1.673 1.673 0 1 0 2.367 2.366l5.483-5.5v12.65a1.666 1.666 0 1 0 3.334 0V5.683l5.483 5.5a1.668 1.668 0 0 0 2.367 0 1.665 1.665 0 0 0 0-2.366L12.183.483a1.666 1.666 0 0 0-.55-.35 1.666 1.666 0 0 0-1.266 0Z'
+        }
+        height={'25px'}
+        smooth
+      />
       <div className={styles.bg} />
       <Fade in={true} timeout={1100}>
         <div className={clsx(styles.root, noMargin && styles.noMargin)}>
-          {!isRoot && !fullScreen && (
+          {!isRoot && !fullScreen && !isCross && (
             <div className={styles.back} onClick={goBack}>
               <BackIcon />
               <span className={styles.backText}>{backText}</span>
+            </div>
+          )}
+          {isCross && (
+            <div
+              style={{
+                display: 'flex',
+                justifyContent: 'flex-end',
+              }}
+            >
+              <img
+                style={{
+                  cursor: 'pointer',
+                  marginBottom: 35,
+                }}
+                src={cross}
+                onClick={goBack}
+                alt=""
+              />
+            </div>
+          )}
+          {head && (
+            <div
+              style={{
+                position: 'absolute',
+                top: -10,
+                left: '50%',
+                transform: 'translate(-50%, 0)',
+                color: '#F9D2D6',
+                fontSize: 36,
+                fontWeight: 600,
+              }}
+            >
+              {head}
             </div>
           )}
           {children}

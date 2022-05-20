@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import group from './img/group.png';
 import ItemPlus from './ItemPlus';
@@ -42,9 +43,9 @@ export default ({ onClick }: any) => {
             }}
           >
             Zoely® содержит{' '}
-            <span onClick={onClick} className="bluer_link">
+            <Link className="bluer_link" to={'/product/eoeli/instruction'}>
               номегэстрола ацетат (NOMAC)
-            </span>{' '}
+            </Link>{' '}
             2,5 мг в сочетании с 17β-эстрадиолом (Е2) 1,5 мг
           </h4>
           <div
