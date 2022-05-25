@@ -43,7 +43,7 @@ export default () => {
             }}
           >
             Zoely® содержит{' '}
-            <Link className="bluer_link" to={'/product/eoeli/instruction'}>
+            <Link className="bluer_link" to={'/product/eoeli/nomak'}>
               номегэстрола ацетат (NOMAC)
             </Link>{' '}
             2,5 мг в сочетании с 17β-эстрадиолом (Е2) 1,5 мг
@@ -84,7 +84,7 @@ export default () => {
             justifyContent: 'center',
           }}
         >
-          <img height={200} src={group} alt="" />
+          <img width={'100%'} src={group} alt="" />
         </div>
       </div>
     </div>
