@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from 'UI/Page';
-import { Link } from 'react-router-dom';
+import LinkContainer from 'UI/LinkContainer';
 
 export default () => {
   return (
@@ -52,14 +52,11 @@ export default () => {
         although its safety profile is still to be fully ascertained, as the
         clinical endpoint studies are yet to be completed.
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/22364709/"
-        target="_blank"
-      >
-        Ruan X., Seeger H., Mueck A. O. The pharmacology of nomegestrol
-        acetate//Maturitas. 2012. № 7. Р. 345–353.
-      </a>
+      <LinkContainer
+        text="Ruan X., Seeger H., Mueck A. O. The pharmacology of nomegestrol
+        acetate//Maturitas. 2012. № 7. Р. 345–353."
+        link={'https://pubmed.ncbi.nlm.nih.gov/22364709'}
+      />
     </Page>
   );
 };

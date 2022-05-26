@@ -1,6 +1,6 @@
 import React from 'react';
 import Page from 'UI/Page';
-import { Link } from 'react-router-dom';
+import LinkContainer from 'UI/LinkContainer';
 
 export default () => {
   return (
@@ -42,15 +42,12 @@ export default () => {
         levels induced by the treatment or to the effect of the progestogen
         itself.
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/1773617/"
-        target="_blank"
-      >
-        Basdevant A., et al. Effects of nomegestrol acetate (5 mg/d) on
+      <LinkContainer
+        text="Basdevant A., et al. Effects of nomegestrol acetate (5 mg/d) on
         hormonal, metabolic and hemostatic parameters in premenopausal
-        women//Contraception. 1991. № 44. Р. 599–605.
-      </a>
+        women//Contraception. 1991. № 44. Р. 599–605."
+        link={'https://pubmed.ncbi.nlm.nih.gov/1773617/'}
+      />
     </Page>
   );
 };

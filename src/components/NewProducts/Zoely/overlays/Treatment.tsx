@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Page from 'UI/Page';
+import LinkContainer from 'UI/LinkContainer';
 
 export default () => {
   useEffect(() => {
@@ -80,17 +81,14 @@ export default () => {
           and significantly improved menstrual cycle-related symptoms.
         </div>
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/30465698/"
-        target="_blank"
-      >
-        A Cagnacci, еt al. The BOLERO Study Writing Group (2018): Treatment
+      <LinkContainer
+        text="A Cagnacci, еt al. The BOLERO Study Writing Group (2018): Treatment
         continuation and satisfaction in women using combined oral contraception
         with nomegestrol acetate and oestradiol: a multicentre, prospective
         cohort study (BOLERO), The European Journal of Contraception &
-        Reproductive Health Care, DOI: 10.1080/13625187.2018.1541080
-      </a>
+        Reproductive Health Care, DOI: 10.1080/13625187.2018.1541080"
+        link={'https://pubmed.ncbi.nlm.nih.gov/30465698'}
+      />
     </Page>
   );
 };

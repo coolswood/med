@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Page from 'UI/Page';
+import LinkContainer from 'UI/LinkContainer';
 
 export default () => {
   useEffect(() => {
@@ -104,15 +105,12 @@ export default () => {
           safest brands with regard to risk of venous thrombosis.
         </div>
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/19679614/"
-        target="_blank"
-      >
-        Van Hylckama Vlieg A., et al. The venous thrombotic risc of oral
+      <LinkContainer
+        text="Van Hylckama Vlieg A., et al. The venous thrombotic risc of oral
         contraceptives, effects of estrogen dose and progesterone types: results
-        of the MEGA case-control study//BMJ. 2009. № 339. Р. 2921.
-      </a>
+        of the MEGA case-control study//BMJ. 2009. № 339. Р. 2921."
+        link={'https://pubmed.ncbi.nlm.nih.gov/19679614'}
+      />
       <div
         style={{
           fontSize: 36,
@@ -148,15 +146,12 @@ export default () => {
         that nomegestrol acetate is free from adverse effects on glucose
         tolerance after 6 months treatment.
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/8056124/"
-        target="_blank"
-      >
-        Dorangeon P., Thomas J. L., Choisy H., Lumbroso M., Hazard M. C. Effects
+      <LinkContainer
+        text="Dorangeon P., Thomas J. L., Choisy H., Lumbroso M., Hazard M. C. Effects
         of nomegestrol acetate on carbohydrate metabolism//Diabete Metab. 1993.
-        № 19. Р. 441–445.
-      </a>
+        № 19. Р. 441–445."
+        link={'https://pubmed.ncbi.nlm.nih.gov/8056124'}
+      />
     </Page>
   );
 };

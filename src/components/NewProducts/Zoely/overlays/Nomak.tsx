@@ -1,6 +1,6 @@
 import React from 'react';
+import LinkContainer from 'UI/LinkContainer';
 import Page from 'UI/Page';
-import { Link } from 'react-router-dom';
 
 export default () => {
   return (
@@ -32,13 +32,10 @@ export default () => {
         при этом лишен какой-либо эстрогенной, андрогенной, глюкокортикоидной
         или минералокортикоидной активности.
       </div>
-      <a
-        className="link_active_small"
-        href="https://pubmed.ncbi.nlm.nih.gov/19434889/"
-        target="_blank"
-      >
-        Schindler A. Maturitas. 2008;61: 171-180
-      </a>
+      <LinkContainer
+        text="Schindler A. Maturitas. 2008;61: 171-180"
+        link={'https://pubmed.ncbi.nlm.nih.gov/19434889/'}
+      />
       <div
         style={{
           fontSize: 16,
