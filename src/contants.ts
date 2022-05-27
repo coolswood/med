@@ -202,7 +202,7 @@ export const products = [
     prezentations: [
       {
         name: 'Видора',
-        pdfName: 'vid_p_m',
+        pdfName: 'vid_p_m_1',
         forceVertical: true,
       },
     ],
