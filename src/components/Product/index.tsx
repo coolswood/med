@@ -9,7 +9,7 @@ import Popup from 'UI/Popup';
 import PrezentationItem from './PrezentationItem';
 import clsx from 'clsx';
 
-export type pdfType = 'Иструкции' | 'Материалы' | 'Презентации' | '';
+export type pdfType = 'Иструкции' | 'Материалы' | 'Презентации' | 'Видео' | '';
 
 export default () => {
   const { id } = useParams<{ id: any }>();

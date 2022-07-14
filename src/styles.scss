@@ -3,7 +3,7 @@
     padding: 0;
     font-family: -apple-system, system-ui, BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,sans-serif;
     outline: none !important;
-    letter-spacing: 0.2px
+    letter-spacing: 0.2px !important;
 }
 
 a {
@@ -24,4 +24,104 @@ a {
     /* autoprefixer: ignore next */
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 20px;
+}
+
+.box {
+    background: #2F2F34;
+
+    box-shadow: 2px 3px 4px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+
+    &:after {
+        content: "";
+        display: block;
+        border-radius: 12px;
+        width: 100%;
+        height: 100%;
+        box-shadow: -2px -3px 3px rgba(249, 210, 214, 0.2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.accord_block_item {
+    background: #FFFFFF;
+    border: 1px solid #F7E5E0;
+    box-sizing: border-box;
+    border-radius: 12px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.accord_block_item__pink {
+    background: #F9D2D6;
+}
+
+.accord_block_img {
+    width: 120px;
+    height: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accord_block_h {
+    color: #2F2F34;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+.accord_block_text {
+    color: #2F2F34;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.h2_pink {
+    color: #F9D2D6;
+    font-weight: 600;
+    font-size: 28px;
+    letter-spacing: 0.1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.link_active {
+    color: #0076BD;
+    font-weight: 600;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.link_active_small {
+    color: #0076BD;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.bluer_link {
+    color: #0076BD;
+    font-weight: 600;
+    font-size: 20px;
+    text-decoration: underline;
 }
