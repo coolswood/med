@@ -71,8 +71,16 @@ export default () => {
         {selectedButton === 'Видео' &&
           [
             {
-              name: 'ZOELY исследования (Канада)',
-              pdfName: 'isTKtns2qag',
+              name: 'We Zoely',
+              pdfName: 'P4DR5deylVE',
+            },
+            {
+              name: 'Гормональные контрацептивы',
+              pdfName: '1v6IiJUNQ70',
+            },
+            {
+              name: 'Тапильская Н.И "О контрацепции"',
+              pdfName: '30mZH58kobA',
             },
           ].map(i => (
             <PrezentationItem

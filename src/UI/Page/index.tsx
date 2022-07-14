@@ -107,7 +107,7 @@ export default ({
               zIndex: 101,
             }}
           >
-            Версия: 28
+            Версия: 30
           </div>
           <div
             style={{
